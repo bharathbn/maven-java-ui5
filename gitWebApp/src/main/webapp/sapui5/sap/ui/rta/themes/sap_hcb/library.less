@@ -1,0 +1,92 @@
+/* NOTE: This file was generated as an optimized version of "library.source.less" for the Theme Designer. */
+
+/*!
+ * ${copyright}
+ */
+@import "../base/library.less";
+@import "../../../../../sap/ui/core/themes/sap_hcb/global.less";
+/* START "ToolBar.less" */
+/******************************************************************
+	Style of the RTA ToolBar HCB Theme
+*******************************************************************/
+
+.sapUiRTAToolsMenuWrapper .sapMBtnContent {
+	color: @sapHCStandardFG;
+}
+
+.sapUiRTAToolsMenuWrapper .sapMIBar{
+	background-color:@sapHCStandardBG;
+}
+
+.sapUiRTAToolsMenuWrapper .sapMLabel{
+	color: @sapHCStandardFG;
+}
+
+html.sap-desktop .sapUiRTAToolsMenuWrapper .sapMBtn:focus > .sapMFocusable{
+	outline: 1px dashed @sapHCStandardFG;
+	outline-offset: -1px;
+}
+
+/*	special handling for Internet Explorer */
+html[data-sap-ui-browser*="ie"].sap-desktop .sapUiRTAToolsMenuWrapper .sapMBtn:focus > .sapMFocusable{
+	outline: none;
+	border: 1px dashed @sapHCStandardFG;
+}
+
+.sapUiRTAToolsMenuWrapper .sapMTBActive:focus {
+	outline: 0.125rem dashed @sapHCStandardFG;
+	outline-offset: -0.1875rem;
+}
+
+.sap-desktop .sapUiRTAToolsMenuWrapper :not(.sapMBtnDisabled)>.sapMBtnTransparent {
+	>.sapMBtnIcon, >.sapMBtnContent {
+		color: @sapHCStandardFG;
+	}
+}
+
+.sapUiRTAToolBar .sapMBtnInner {
+	background-color: @sapHCStandardBG;
+}
+
+.sapUiRTAToolsMenuWrapper .sapUiRTAToolBar {
+	box-shadow: 0 0 2.5rem 0.125rem rgba(255, 255, 255, 0.8);
+}
+
+.sapUiRTAToolBar .sapMBtnTransparent.sapMBtnHoverable:hover {
+	background-color: @sapHCHighlightBG;
+
+	>.sapMBtnContent{
+		color: @sapHCStandardFG;
+	}
+}
+/* END "ToolBar.less" */
+
+/* START "Overlay.less" */
+/******************************************************************
+	Style of the RTA Overlays - HCB Theme
+*******************************************************************/
+@sapRtaBaseBG : @sapHCStandardBG;
+@sapUiRtaHoverBG : fade(lighten(@sapHCHighlightBG, 15%), 30%);
+@sapUiRtaActiveBG : fade(lighten(@sapHCHighlightAltBG, 15%), 30%);
+
+.sapUiDtOverlay {
+	&:focus {
+		&:before {
+			border-style: dashed;
+		}
+	}
+}
+
+.sapUiDtOverlaySelected {
+	// show "borders"
+	&:after {
+		content: " ";
+	}
+	&:focus {
+		&:before {
+			border-style: solid;
+		}
+	}
+}
+/* END "Overlay.less" */
+

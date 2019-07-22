@@ -1,0 +1,322 @@
+/*
+ * ! SAP UI development toolkit for HTML5 (SAPUI5)
+
+(c) Copyright 2009-2016 SAP SE. All rights reserved
+ */
+sap.ui.define(['jquery.sap.global',
+			   'sap/ui/rta/library',
+			   'sap/ui/rta/Utils',
+			   'sap/ui/dt/OverlayRegistry',
+			   'sap/ui/core/Control',
+			   'sap/ui/commons/Label',
+			   'sap/ui/commons/LabelDesign',
+			   'sap/m/Dialog',
+			   'sap/ui/model/json/JSONModel',
+			   'sap/m/SearchField',
+			   'sap/m/Button',
+			   'sap/m/Toolbar',
+			   'sap/m/ToolbarSpacer',
+			   'sap/ui/model/Filter',
+			   'sap/ui/model/FilterOperator',
+			   'sap/ui/rta/controlAnalyzer/ControlAnalyzerFactory',
+			   'sap/ui/rta/command/CommandFactory',
+			   'sap/ui/rta/command/CompositeCommand',
+			   'sap/m/List',
+			   'sap/m/CustomListItem',
+			   'sap/m/ListType',
+			   'sap/m/ScrollContainer',
+			   'sap/ui/model/Sorter',
+			   'sap/ui/dt/ElementUtil',
+			   'sap/m/VBox'
+			   ],
+			   function (jQuery,library,Utils,OverlayRegistry,Control,Label,LabelDesign,Dialog,JSONModel,SearchField,Button,Toolbar,ToolbarSpacer,Filter,FilterOperator,ControlAnalyzerFactory,CommandFactory,CompositeCommand,List,ListItem,ListType,ScrollContainer,Sorter,ElementUtil, VBox) {
+	"use strict";
+
+	/**
+	 * Constructor for a new sap.ui.rta.plugin.additionalElements.AddElementsDialog control.
+	 *
+	 * @class Context - Dialog for available Fields in Runtime Authoring
+	 * @extends sap.ui.core.Control
+	 * @author SAP SE
+	 * @version 1.44.4
+	 * @constructor
+	 * @private
+	 * @since 1.44
+	 * @alias sap.ui.rta.plugin.additionalElements.AddElementsDialog
+	 * @experimental Since 1.44. This class is experimental and provides only limited functionality. Also the API might be
+	 *			   changed in future.
+	 */
+	var AddElementsDialog = Control.extend("sap.ui.rta.plugin.additionalElements.AddElementsDialog", {
+		metadata : {
+			library : "sap.ui.rta",
+			properties : {
+				"customFieldEnabled" : {
+					type: "boolean",
+					defaultValue: false
+				},
+				"title" : {
+					type: "string"
+				}
+			},
+			aggregations : {
+				"_dialog" : {
+					type: "sap.ui.core.Control", visibility: "hidden", multiple: false
+				}
+			},
+			events : {
+				"opened" : {},
+				"openCustomField" : {}
+			}
+		}
+	});
+
+	/**
+	 * Initialize the Dialog
+	 *
+	 * @private
+	 */
+	AddElementsDialog.prototype.init = function() {
+		var that = this;
+		// Get messagebundle.properties for sap.ui.rta
+		this._oTextResources = sap.ui.getCore().getLibraryResourceBundle("sap.ui.rta");
+		this._bAscendingSortOrder = false;
+		this._oDialog = new Dialog().addStyleClass("sapUIRtaFieldRepositoryDialog");
+		this.setAggregation("_dialog", this._oDialog);
+		var aContent = this._createContent();
+		var aButtons = this._createButtons();
+		aContent.forEach(function(oContent) {
+			that._oDialog.addContent(oContent);
+		});
+		aButtons.forEach(function(oButton) {
+			that._oDialog.addButton(oButton);
+		});
+		this._oDialog.setInitialFocus(this._oInput);
+	};
+
+	/**
+	 * Create the Content of the Dialog
+	 *
+	 * @private
+	 */
+	AddElementsDialog.prototype._createContent = function() {
+		var that = this;
+		// SearchField
+		this._oInput =  new SearchField({
+			width : "100%",
+			liveChange : [this._updateModelFilter, this]
+		}).addStyleClass("resourceListIF");
+
+		// Button for sorting the List
+		var oResortButton = new Button({
+			text : "",
+			icon : "sap-icon://sort",
+			press : [this._resortList, this]
+		});
+
+		// Button for creating Custom Fields
+		this._oCustomFieldButton = new Button({
+			text : "",
+			icon : "sap-icon://add",
+			tooltip : this._oTextResources.getText("BTN_FREP_CCF"),
+			enabled : this.getCustomFieldEnabled(),
+			press : [this._redirectToCustomFieldCreation, this]
+		});
+
+		// Toolbar
+		this._oToolbarSpacer1 = new ToolbarSpacer();
+		this.oInputFields = new Toolbar({
+			content: [this._oInput, oResortButton, this._oToolbarSpacer1, this._oCustomFieldButton]
+		});
+
+		// Fields of the List
+		var oFieldName = new Label({
+			design: LabelDesign.Bold,
+			tooltip: "{tooltip}",
+			text: {
+				parts: [{path: "label"}, {path: "referencedComplexPropertyName"}, {path: "duplicateComplexName"}],
+				formatter: function(sLabel, sReferencedComplexPropertyName, bDuplicateComplexName) {
+					if (bDuplicateComplexName && sReferencedComplexPropertyName) {
+						sLabel += " (" + sReferencedComplexPropertyName + ")";
+					}
+					return sLabel;
+				}
+			}
+		});
+
+		var oFieldName2 = new Label({
+			text: {
+				parts: [{path: "originalLabel"}],
+				formatter: function(sOriginalLabel) {
+					if (sOriginalLabel) {
+						return that._oTextResources.getText("LBL_FREP", sOriginalLabel);
+					}
+					return "";
+				}
+			},
+			visible: {
+				parts: [{path: "originalLabel"}],
+				formatter: function(sOriginalLabel) {
+					if (sOriginalLabel) {
+						return true;
+					}
+					return false;
+				}
+			}
+		});
+
+		var oVBox = new VBox();
+		oVBox.addItem(oFieldName);
+		oVBox.addItem(oFieldName2);
+
+		// List
+		var oSorter = new Sorter("label", this._bAscendingSortOrder);
+		this._oList = new List(
+				{
+					mode : "MultiSelect",
+					includeItemInSelection : true,
+					growing : false,
+					growingScrollToLoad : false
+				}).setNoDataText(this._oTextResources.getText("MSG_NO_FIELDS"));
+
+		var oListItem = new ListItem({
+			type: ListType.Active,
+			selected : "{selected}",
+			content : [oVBox]
+		});
+
+		this._oList.bindItems({path:"/elements", template: oListItem, sorter : oSorter});
+
+		// Scrollcontainer containing the List
+		// Needed for scrolling the List
+		var oScrollContainer = new ScrollContainer({
+			content: this._oList,
+			vertical: true,
+			horizontal: false
+		}).addStyleClass("sapUIRtaCCDialogScrollContainer");
+
+		return [this.oInputFields,
+				oScrollContainer];
+	};
+
+	/**
+	 * Create the Buttons of the Dialog (OK/Cancel)
+	 *
+	 * @private
+	 */
+	AddElementsDialog.prototype._createButtons = function() {
+		var oOKButton = new Button({
+			text : this._oTextResources.getText("BTN_FREP_OK"),
+			press : [this._submitDialog, this]
+		});
+		var oCancelButton = new Button({
+			text : this._oTextResources.getText("BTN_FREP_CANCEL"),
+			press : [this._cancelDialog, this]
+		});
+		return [oOKButton, oCancelButton];
+	};
+
+	/**
+	 * Close the dialog.
+	 */
+	AddElementsDialog.prototype._submitDialog = function() {
+		this._oDialog.close();
+		this._fnResolve();
+	};
+
+	/**
+	 * Close dialog and revert all change operations
+	 */
+	AddElementsDialog.prototype._cancelDialog = function() {
+		// clear all variables
+		this._oList.removeSelections();
+		this._oDialog.close();
+		this._fnReject();
+	};
+
+	/**
+	 * Open the Field Repository Dialog
+	 *
+	 * @param {sap.ui.core.Control}
+	 *		  oControl Currently selected control
+	 */
+	AddElementsDialog.prototype.open = function(oControl) {
+		var that = this;
+
+		return new Promise(function (resolve, reject) {
+			that._fnResolve = resolve;
+			that._fnReject = reject;
+			that._oDialog.oPopup.attachOpened(function (){
+				that.fireOpened();
+			});
+			// Makes sure the modal div element does not change the size of our application (which would result in
+			// recalculation of our overlays)
+			that._oDialog.open();
+		});
+	};
+
+	/**
+	 * Resort the list
+	 *
+	 * @param {sap.ui.base.Event}
+	 *		  oEvent event object
+	 * @private
+	 */
+	AddElementsDialog.prototype._resortList = function(oEvent) {
+		this._bAscendingSortOrder = !this._bAscendingSortOrder;
+		var oBinding = this._oList.getBinding("items");
+		var aSorter = [];
+		aSorter.push(new Sorter("label", this._bAscendingSortOrder));
+		oBinding.sort(aSorter);
+	};
+
+	/**
+	 * Updates the model on filter events
+	 *
+	 * @param {sap.ui.base.Event}
+	 *		  oEvent event object
+	 * @private
+	 */
+	AddElementsDialog.prototype._updateModelFilter = function(oEvent) {
+		var sValue = oEvent.getParameter("newValue");
+		var oBinding = this._oList.getBinding("items");
+		if ((typeof sValue) === "string") {
+			var oFilterLabel = new Filter("label", FilterOperator.Contains, sValue);
+			var oFilterQuickInfo = new Filter("tooltip", FilterOperator.Contains, sValue);
+			var oFilterLabelOrInfo = new Filter({ filters: [oFilterLabel, oFilterQuickInfo], and: false });
+			oBinding.filter([oFilterLabelOrInfo]);
+		} else {
+			oBinding.filter([]);
+		}
+	};
+
+	/**
+	 * Fire an event to redirect to custom field creation
+	 *
+	 * @param {sap.ui.base.Event}
+	 *		  oEvent event object
+	 * @private
+	 */
+	AddElementsDialog.prototype._redirectToCustomFieldCreation = function(oEvent) {
+		this.fireOpenCustomField();
+		this._oDialog.close();
+	};
+
+	AddElementsDialog.prototype.setTitle = function(sTitle) {
+		Control.prototype.setProperty.call(this, "title", sTitle, true);
+		this._oDialog.setTitle(sTitle);
+	};
+
+	/**
+	 * Enables the Custom Field Creation button
+	 *
+	 * @param {boolean}
+	 *		  bCustomFieldEnabled true shows the button, false not
+	 */
+	AddElementsDialog.prototype.setCustomFieldEnabled = function(bCustomFieldEnabled) {
+		Control.prototype.setProperty.call(this, "customFieldEnabled", bCustomFieldEnabled, true);
+		this._oCustomFieldButton.setEnabled(bCustomFieldEnabled);
+	};
+
+	return AddElementsDialog;
+
+}, /* bExport= */ true);

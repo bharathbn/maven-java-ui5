@@ -1,0 +1,7 @@
+{
+  "sEntity": "Theme",
+  "sId": "sap_platinum",
+  "oExtends": "base",
+  "sVendor": "SAP",
+  "sDeprecated" : "since version 1.38.0"
+}

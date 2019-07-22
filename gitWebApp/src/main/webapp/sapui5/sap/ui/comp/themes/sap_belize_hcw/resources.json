@@ -1,0 +1,165 @@
+{
+  "_version": "1.1.0",
+  "resources": [
+    {
+      "name": ".theming",
+      "theme": "base"
+    },
+    {
+      "name": "DialogContent.css",
+      "theme": "base"
+    },
+    {
+      "name": "EditableVariantItem.css",
+      "theme": "base"
+    },
+    {
+      "name": "FieldList.css",
+      "theme": "base"
+    },
+    {
+      "name": "FieldListNode.css",
+      "theme": "base"
+    },
+    {
+      "name": "FieldSelector.css",
+      "theme": "base"
+    },
+    {
+      "name": "FilterBar.css",
+      "theme": "base"
+    },
+    {
+      "name": "FullScreenDialog.css",
+      "theme": "base"
+    },
+    {
+      "name": "Group.css",
+      "theme": "base"
+    },
+    {
+      "name": "GroupC.css",
+      "theme": "base"
+    },
+    {
+      "name": "GroupElement.css",
+      "theme": "base"
+    },
+    {
+      "name": "GroupElementC.css",
+      "theme": "base"
+    },
+    {
+      "name": "Input.css",
+      "theme": "base"
+    },
+    {
+      "name": "NavigationPopover.css",
+      "theme": "base"
+    },
+    {
+      "name": "SmartChart.css",
+      "theme": "base"
+    },
+    {
+      "name": "SmartField.css",
+      "theme": "base"
+    },
+    {
+      "name": "SmartFieldControl.css",
+      "theme": "base"
+    },
+    {
+      "name": "SmartFilterBar.css",
+      "theme": "base"
+    },
+    {
+      "name": "SmartForm.css",
+      "theme": "base"
+    },
+    {
+      "name": "SmartLabel.css",
+      "theme": "base"
+    },
+    {
+      "name": "SmartLink.css",
+      "theme": "base"
+    },
+    {
+      "name": "SmartTable.css",
+      "theme": "base"
+    },
+    {
+      "name": "SmartVariantManagementUi2.css",
+      "theme": "base"
+    },
+    {
+      "name": "TestColumnsPanel.css",
+      "theme": "base"
+    },
+    {
+      "name": "Title.css",
+      "theme": "base"
+    },
+    {
+      "name": "TransportDialog.css",
+      "theme": "base"
+    },
+    {
+      "name": "ValueHelpDialog.css",
+      "theme": "base"
+    },
+    {
+      "name": "VariantItem.css",
+      "theme": "base"
+    },
+    {
+      "name": "VariantManagement.css",
+      "theme": "base"
+    },
+    {
+      "name": "library-RTL-dbg.css",
+      "isDebug": true,
+      "theme": "base"
+    },
+    {
+      "name": "library-RTL.css",
+      "theme": "base"
+    },
+    {
+      "name": "library-dbg.css",
+      "isDebug": true,
+      "theme": "base"
+    },
+    {
+      "name": "library-parameters.json",
+      "theme": "base"
+    },
+    {
+      "name": "library.css",
+      "theme": "base"
+    },
+    {
+      "name": "library.less",
+      "designtime": true,
+      "theme": "base"
+    },
+    {
+      "name": "library.source.less",
+      "designtime": true,
+      "theme": "base"
+    },
+    {
+      "name": "shared.css",
+      "theme": "base"
+    },
+    {
+      "name": "smartVariantManagement.css",
+      "theme": "base"
+    },
+    {
+      "name": "test.css",
+      "theme": "base"
+    }
+  ]
+}

@@ -1,0 +1,658 @@
+<?xml version="1.0" ?>
+<library  version="2.0" name="sap.ui.rta">
+  <module name="sap/ui/rta/ModelConverter.js" size="4703" compressedSize="1641">
+    <description>declare unusual global vars for JSLint/SAPUI5 validation</description>
+    <requires>
+      <module name="jquery.sap.global.js"/>
+      <module name="sap/ui/comp/odata/FieldSelectorModelConverter.js"/>
+      <module name="sap/ui/dt/ElementUtil.js"/>
+    </requires>
+  </module>
+  <module name="sap/ui/rta/RuntimeAuthoring.js" size="38500" compressedSize="21371">
+    <description>Provides class sap.ui.rta.Main.</description>
+    <requires>
+      <module name="jquery.sap.global.js"/>
+      <module name="sap/ui/base/ManagedObject.js"/>
+      <module name="sap/ui/rta/ui/ToolsMenu.js"/>
+      <module name="sap/ui/dt/ElementUtil.js"/>
+      <module name="sap/ui/dt/DesignTime.js"/>
+      <module name="sap/ui/dt/OverlayRegistry.js"/>
+      <module name="sap/ui/dt/Overlay.js"/>
+      <module name="sap/ui/rta/command/Stack.js"/>
+      <module name="sap/ui/rta/command/CommandFactory.js"/>
+      <module name="sap/ui/rta/command/LREPSerializer.js"/>
+      <module name="sap/ui/rta/plugin/Rename.js"/>
+      <module name="sap/ui/rta/plugin/DragDrop.js"/>
+      <module name="sap/ui/rta/plugin/RTAElementMover.js"/>
+      <module name="sap/ui/dt/plugin/CutPaste.js"/>
+      <module name="sap/ui/rta/plugin/Remove.js"/>
+      <module name="sap/ui/rta/plugin/CreateContainer.js"/>
+      <module name="sap/ui/rta/plugin/additionalElements/AdditionalElementsPlugin.js"/>
+      <module name="sap/ui/rta/plugin/additionalElements/AddElementsDialog.js"/>
+      <module name="sap/ui/rta/plugin/additionalElements/AdditionalElementsAnalyzer.js"/>
+      <module name="sap/ui/rta/plugin/Selection.js"/>
+      <module name="sap/ui/rta/plugin/MultiSelection.js"/>
+      <module name="sap/ui/rta/plugin/Settings.js"/>
+      <module name="sap/ui/dt/plugin/ContextMenu.js"/>
+      <module name="sap/ui/dt/plugin/TabHandling.js"/>
+      <module name="sap/ui/fl/FlexControllerFactory.js"/>
+      <module name="sap/ui/rta/ui/SettingsDialog.js"/>
+      <module name="sap/ui/rta/ui/AddElementsDialog.js"/>
+      <module name="sap/ui/rta/Utils.js"/>
+      <module name="sap/ui/fl/transport/Transports.js"/>
+      <module name="sap/ui/fl/transport/TransportSelection.js"/>
+      <module name="sap/ui/fl/Utils.js"/>
+      <module name="sap/ui/fl/registry/Settings.js"/>
+      <module name="sap/m/MessageBox.js" conditional="true"/>
+      <module name="sap/m/MessageToast.js"/>
+      <module name="sap/ui/rta/controlAnalyzer/ControlAnalyzerFactory.js"/>
+    </requires>
+  </module>
+  <module name="sap/ui/rta/Utils.js" size="32393" compressedSize="10160">
+    <description>Provides object sap.ui.rta.Utils.</description>
+    <requires>
+      <module name="jquery.sap.global.js"/>
+      <module name="sap/ui/fl/Utils.js"/>
+      <module name="sap/ui/dt/OverlayUtil.js"/>
+      <module name="sap/ui/comp/odata/FieldSelectorModelConverter.js"/>
+      <module name="sap/ui/fl/registry/Settings.js"/>
+      <module name="sap/ui/comp/smartform/GroupElement.js"/>
+      <module name="sap/ui/comp/smartform/Group.js"/>
+      <module name="sap/ui/comp/smartfield/SmartField.js"/>
+      <module name="sap/uxap/ObjectPageSection.js"/>
+      <module name="sap/uxap/ObjectPageLayout.js"/>
+      <module name="sap/ui/core/StashedControlSupport.js"/>
+      <module name="sap/m/MessageBox.js"/>
+      <module name="sap/ui/comp/odata/MetadataAnalyser.js"/>
+      <module name="sap/ui/rta/model/ElementPreprocessor.js"/>
+      <module name="sap/ui/rta/plugin/additionalElements/AdditionalElementsPlugin.js" conditional="true"/>
+      <module name="sap/ui/rta/command/CommandFactory.js" conditional="true"/>
+    </requires>
+  </module>
+  <module name="sap/ui/rta/command/AddODataProperty.js" size="2289" compressedSize="1172">
+    <description>! SAP UI development toolkit for HTML5 (SAPUI5)&#xA;&#xA;(c) Copyright 2009-2016 SAP SE. All rights reserved</description>
+    <requires>
+      <module name="jquery.sap.global.js"/>
+      <module name="sap/ui/rta/command/FlexCommand.js"/>
+      <module name="sap/ui/rta/controlAnalyzer/ControlAnalyzerFactory.js"/>
+      <module name="sap/ui/fl/Utils.js"/>
+      <module name="sap/ui/fl/changeHandler/BaseTreeModifier.js"/>
+    </requires>
+  </module>
+  <module name="sap/ui/rta/command/AddSmart.js" size="2917" compressedSize="1517">
+    <description>! SAP UI development toolkit for HTML5 (SAPUI5)&#xA;&#xA;(c) Copyright 2009-2016 SAP SE. All rights reserved</description>
+    <requires>
+      <module name="jquery.sap.global.js"/>
+      <module name="sap/ui/rta/command/FlexCommand.js"/>
+      <module name="sap/ui/rta/controlAnalyzer/ControlAnalyzerFactory.js"/>
+      <module name="sap/ui/fl/Utils.js"/>
+      <module name="sap/ui/fl/changeHandler/BaseTreeModifier.js"/>
+    </requires>
+  </module>
+  <module name="sap/ui/rta/command/BaseCommand.js" size="2509" compressedSize="1170">
+    <description>! SAP UI development toolkit for HTML5 (SAPUI5)&#xA;&#xA;(c) Copyright 2009-2016 SAP SE. All rights reserved</description>
+    <requires>
+      <module name="sap/ui/base/ManagedObject.js"/>
+      <module name="jquery.sap.global.js"/>
+    </requires>
+  </module>
+  <module name="sap/ui/rta/command/BindProperty.js" size="4544" compressedSize="2209">
+    <description>! SAP UI development toolkit for HTML5 (SAPUI5)&#xA;&#xA;(c) Copyright 2009-2016 SAP SE. All rights reserved</description>
+    <requires>
+      <module name="sap/ui/rta/command/FlexCommand.js"/>
+      <module name="sap/ui/fl/changeHandler/PropertyBindingChange.js"/>
+      <module name="sap/ui/rta/Utils.js"/>
+      <module name="jquery.sap.global.js"/>
+    </requires>
+  </module>
+  <module name="sap/ui/rta/command/CommandFactory.js" size="8929" compressedSize="3913" dynamicDependencies="true">
+    <description>! SAP UI development toolkit for HTML5 (SAPUI5)&#xA;&#xA;(c) Copyright 2009-2016 SAP SE. All rights reserved</description>
+    <requires>
+      <module name="sap/ui/base/ManagedObject.js"/>
+      <module name="sap/ui/rta/controlAnalyzer/ControlAnalyzerFactory.js"/>
+      <module name="sap/ui/dt/ElementUtil.js"/>
+      <module name="sap/ui/fl/registry/ChangeRegistry.js"/>
+      <module name="jquery.sap.global.js"/>
+    </requires>
+  </module>
+  <module name="sap/ui/rta/command/CompositeCommand.js" size="1579" compressedSize="778">
+    <description>! SAP UI development toolkit for HTML5 (SAPUI5)&#xA;&#xA;(c) Copyright 2009-2016 SAP SE. All rights reserved</description>
+    <requires>
+      <module name="sap/ui/rta/command/BaseCommand.js"/>
+      <module name="jquery.sap.global.js"/>
+    </requires>
+  </module>
+  <module name="sap/ui/rta/command/CreateContainer.js" size="2941" compressedSize="1623">
+    <description>! SAP UI development toolkit for HTML5 (SAPUI5)&#xA;&#xA;(c) Copyright 2009-2016 SAP SE. All rights reserved</description>
+    <requires>
+      <module name="jquery.sap.global.js"/>
+      <module name="sap/ui/rta/command/FlexCommand.js"/>
+      <module name="sap/ui/rta/controlAnalyzer/ControlAnalyzerFactory.js"/>
+    </requires>
+  </module>
+  <module name="sap/ui/rta/command/FlexCommand.js" size="3715" compressedSize="1855">
+    <description>! SAP UI development toolkit for HTML5 (SAPUI5)&#xA;&#xA;(c) Copyright 2009-2016 SAP SE. All rights reserved</description>
+    <requires>
+      <module name="sap/ui/rta/command/BaseCommand.js"/>
+      <module name="sap/ui/fl/FlexControllerFactory.js"/>
+      <module name="sap/ui/fl/changeHandler/JsControlTreeModifier.js"/>
+      <module name="sap/ui/fl/Utils.js"/>
+      <module name="jquery.sap.global.js"/>
+    </requires>
+  </module>
+  <module name="sap/ui/rta/command/Group.js" size="5955" compressedSize="3272">
+    <description>! SAP UI development toolkit for HTML5 (SAPUI5)&#xA;&#xA;(c) Copyright 2009-2016 SAP SE. All rights reserved</description>
+    <requires>
+      <module name="sap/ui/rta/command/BaseCommand.js"/>
+      <module name="sap/ui/rta/Utils.js"/>
+      <module name="sap/ui/rta/controlAnalyzer/ControlAnalyzerFactory.js"/>
+      <module name="sap/ui/dt/ElementDesignTimeMetadata.js"/>
+      <module name="jquery.sap.global.js"/>
+    </requires>
+  </module>
+  <module name="sap/ui/rta/command/Hide.js" size="1417" compressedSize="645">
+    <description>! SAP UI development toolkit for HTML5 (SAPUI5)&#xA;&#xA;(c) Copyright 2009-2016 SAP SE. All rights reserved</description>
+    <requires>
+      <module name="sap/ui/rta/command/FlexCommand.js"/>
+      <module name="sap/ui/fl/changeHandler/HideControl.js"/>
+      <module name="jquery.sap.global.js"/>
+    </requires>
+  </module>
+  <module name="sap/ui/rta/command/HideForm.js" size="4357" compressedSize="2388">
+    <description>! SAP UI development toolkit for HTML5 (SAPUI5)&#xA;&#xA;(c) Copyright 2009-2016 SAP SE. All rights reserved</description>
+    <requires>
+      <module name="sap/ui/rta/command/FlexCommand.js"/>
+      <module name="sap/ui/rta/command/Hide.js"/>
+      <module name="sap/ui/fl/changeHandler/HideControl.js"/>
+      <module name="jquery.sap.global.js"/>
+    </requires>
+  </module>
+  <module name="sap/ui/rta/command/LREPSerializer.js" size="2321" compressedSize="984">
+    <description>! SAP UI development toolkit for HTML5 (SAPUI5)&#xA;&#xA;(c) Copyright 2009-2016 SAP SE. All rights reserved</description>
+    <requires>
+      <module name="sap/ui/base/ManagedObject.js"/>
+      <module name="sap/ui/rta/command/Stack.js"/>
+      <module name="sap/ui/fl/FlexControllerFactory.js"/>
+      <module name="jquery.sap.global.js"/>
+    </requires>
+  </module>
+  <module name="sap/ui/rta/command/Move.js" size="2863" compressedSize="1460">
+    <description>! SAP UI development toolkit for HTML5 (SAPUI5)&#xA;&#xA;(c) Copyright 2009-2016 SAP SE. All rights reserved</description>
+    <requires>
+      <module name="jquery.sap.global.js"/>
+      <module name="sap/ui/rta/command/FlexCommand.js"/>
+    </requires>
+  </module>
+  <module name="sap/ui/rta/command/Property.js" size="2804" compressedSize="1574">
+    <description>! SAP UI development toolkit for HTML5 (SAPUI5)&#xA;&#xA;(c) Copyright 2009-2016 SAP SE. All rights reserved</description>
+    <requires>
+      <module name="sap/ui/rta/command/FlexCommand.js"/>
+      <module name="sap/ui/fl/changeHandler/PropertyChange.js"/>
+      <module name="sap/ui/rta/Utils.js"/>
+      <module name="jquery.sap.global.js"/>
+    </requires>
+  </module>
+  <module name="sap/ui/rta/command/Remove.js" size="2618" compressedSize="1528">
+    <description>! SAP UI development toolkit for HTML5 (SAPUI5)&#xA;&#xA;(c) Copyright 2009-2016 SAP SE. All rights reserved</description>
+    <requires>
+      <module name="sap/ui/rta/command/FlexCommand.js"/>
+      <module name="jquery.sap.global.js"/>
+    </requires>
+  </module>
+  <module name="sap/ui/rta/command/Rename.js" size="3124" compressedSize="1818">
+    <description>! SAP UI development toolkit for HTML5 (SAPUI5)&#xA;&#xA;(c) Copyright 2009-2016 SAP SE. All rights reserved</description>
+    <requires>
+      <module name="jquery.sap.global.js"/>
+      <module name="sap/ui/rta/command/FlexCommand.js"/>
+      <module name="sap/ui/comp/smartform/flexibility/changes/RenameGroup.js"/>
+      <module name="sap/ui/comp/smartform/flexibility/changes/RenameField.js"/>
+      <module name="sap/ui/fl/Change.js"/>
+    </requires>
+  </module>
+  <module name="sap/ui/rta/command/Reveal.js" size="1773" compressedSize="860">
+    <description>! SAP UI development toolkit for HTML5 (SAPUI5)&#xA;&#xA;(c) Copyright 2009-2016 SAP SE. All rights reserved</description>
+    <requires>
+      <module name="sap/ui/rta/command/FlexCommand.js"/>
+      <module name="jquery.sap.global.js"/>
+    </requires>
+  </module>
+  <module name="sap/ui/rta/command/Settings.js" size="2145" compressedSize="1135">
+    <description>! SAP UI development toolkit for HTML5 (SAPUI5)&#xA;&#xA;(c) Copyright 2009-2016 SAP SE. All rights reserved</description>
+    <requires>
+      <module name="sap/ui/rta/command/FlexCommand.js"/>
+      <module name="jquery.sap.global.js"/>
+    </requires>
+  </module>
+  <module name="sap/ui/rta/command/Stack.js" size="4474" compressedSize="2491">
+    <description>! SAP UI development toolkit for HTML5 (SAPUI5)&#xA;&#xA;(c) Copyright 2009-2016 SAP SE. All rights reserved</description>
+    <requires>
+      <module name="sap/ui/base/ManagedObject.js"/>
+      <module name="jquery.sap.global.js"/>
+    </requires>
+  </module>
+  <module name="sap/ui/rta/command/Stash.js" size="1544" compressedSize="722">
+    <description>! SAP UI development toolkit for HTML5 (SAPUI5)&#xA;&#xA;(c) Copyright 2009-2016 SAP SE. All rights reserved</description>
+    <requires>
+      <module name="sap/ui/rta/command/FlexCommand.js"/>
+      <module name="sap/ui/fl/changeHandler/StashControl.js"/>
+      <module name="jquery.sap.global.js"/>
+    </requires>
+  </module>
+  <module name="sap/ui/rta/command/Ungroup.js" size="5222" compressedSize="2960">
+    <description>! SAP UI development toolkit for HTML5 (SAPUI5)&#xA;&#xA;(c) Copyright 2009-2016 SAP SE. All rights reserved</description>
+    <requires>
+      <module name="sap/ui/rta/command/BaseCommand.js"/>
+      <module name="sap/ui/rta/Utils.js"/>
+      <module name="sap/ui/rta/controlAnalyzer/ControlAnalyzerFactory.js"/>
+      <module name="jquery.sap.global.js"/>
+    </requires>
+  </module>
+  <module name="sap/ui/rta/command/Unhide.js" size="1440" compressedSize="652">
+    <description>! SAP UI development toolkit for HTML5 (SAPUI5)&#xA;&#xA;(c) Copyright 2009-2016 SAP SE. All rights reserved</description>
+    <requires>
+      <module name="sap/ui/rta/command/FlexCommand.js"/>
+      <module name="sap/ui/fl/changeHandler/UnhideControl.js"/>
+      <module name="jquery.sap.global.js"/>
+    </requires>
+  </module>
+  <module name="sap/ui/rta/command/UnhideForm.js" size="2933" compressedSize="1501">
+    <description>! SAP UI development toolkit for HTML5 (SAPUI5)&#xA;&#xA;(c) Copyright 2009-2016 SAP SE. All rights reserved</description>
+    <requires>
+      <module name="sap/ui/rta/command/FlexCommand.js"/>
+      <module name="sap/ui/rta/command/Unhide.js"/>
+      <module name="sap/ui/fl/changeHandler/UnhideControl.js"/>
+      <module name="jquery.sap.global.js"/>
+    </requires>
+  </module>
+  <module name="sap/ui/rta/command/Unstash.js" size="2462" compressedSize="1349">
+    <description>! SAP UI development toolkit for HTML5 (SAPUI5)&#xA;&#xA;(c) Copyright 2009-2016 SAP SE. All rights reserved</description>
+    <requires>
+      <module name="sap/ui/rta/command/FlexCommand.js"/>
+      <module name="sap/ui/fl/changeHandler/UnstashControl.js"/>
+      <module name="jquery.sap.global.js"/>
+    </requires>
+  </module>
+  <module name="sap/ui/rta/controlAnalyzer/Base.js" size="5836" compressedSize="2461">
+    <description>! SAP UI development toolkit for HTML5 (SAPUI5)&#xA;&#xA;(c) Copyright 2009-2016 SAP SE. All rights reserved</description>
+    <requires>
+      <module name="sap/ui/base/ManagedObject.js"/>
+      <module name="sap/ui/dt/ElementUtil.js"/>
+      <module name="sap/ui/fl/Utils.js"/>
+      <module name="jquery.sap.global.js"/>
+    </requires>
+  </module>
+  <module name="sap/ui/rta/controlAnalyzer/ControlAnalyzerFactory.js" size="2628" compressedSize="1030">
+    <description>Provides object sap.ui.rta.ControlAnalyzerFactory.</description>
+    <requires>
+      <module name="sap/ui/rta/controlAnalyzer/SmartForm.js"/>
+      <module name="sap/ui/rta/controlAnalyzer/Form.js"/>
+      <module name="sap/ui/rta/controlAnalyzer/ObjectPage.js"/>
+      <module name="jquery.sap.global.js"/>
+    </requires>
+  </module>
+  <module name="sap/ui/rta/controlAnalyzer/Form.js" size="10092" compressedSize="5070">
+    <description>! SAP UI development toolkit for HTML5 (SAPUI5)&#xA;&#xA;(c) Copyright 2009-2016 SAP SE. All rights reserved</description>
+    <requires>
+      <module name="sap/ui/rta/controlAnalyzer/Base.js"/>
+      <module name="sap/ui/rta/Utils.js"/>
+      <module name="sap/ui/dt/ElementUtil.js"/>
+      <module name="sap/ui/fl/Utils.js"/>
+      <module name="jquery.sap.global.js"/>
+    </requires>
+  </module>
+  <module name="sap/ui/rta/controlAnalyzer/ObjectPage.js" size="6072" compressedSize="2893">
+    <description>! SAP UI development toolkit for HTML5 (SAPUI5)&#xA;&#xA;(c) Copyright 2009-2016 SAP SE. All rights reserved</description>
+    <requires>
+      <module name="sap/ui/rta/controlAnalyzer/Base.js"/>
+      <module name="sap/ui/rta/Utils.js"/>
+      <module name="sap/ui/dt/ElementUtil.js"/>
+      <module name="sap/ui/core/StashedControlSupport.js"/>
+      <module name="jquery.sap.global.js"/>
+    </requires>
+  </module>
+  <module name="sap/ui/rta/controlAnalyzer/SmartForm.js" size="22844" compressedSize="10111">
+    <description>! SAP UI development toolkit for HTML5 (SAPUI5)&#xA;&#xA;(c) Copyright 2009-2016 SAP SE. All rights reserved</description>
+    <requires>
+      <module name="sap/ui/rta/controlAnalyzer/Base.js"/>
+      <module name="sap/ui/rta/Utils.js"/>
+      <module name="sap/ui/dt/ElementUtil.js"/>
+      <module name="sap/ui/rta/ModelConverter.js"/>
+      <module name="sap/ui/comp/odata/MetadataAnalyser.js"/>
+      <module name="sap/ui/rta/model/ElementPreprocessor.js"/>
+      <module name="jquery.sap.global.js"/>
+    </requires>
+  </module>
+  <module name="sap/ui/rta/library.js" size="884" compressedSize="487">
+    <description>Initialization Code and shared classes of library sap.ui.rta.</description>
+    <requires>
+      <module name="jquery.sap.global.js"/>
+      <module name="sap/ui/core/Core.js"/>
+      <module name="sap/ui/core/library.js"/>
+    </requires>
+  </module>
+  <module name="sap/ui/rta/manifest.json" size="841">
+  </module>
+  <module name="sap/ui/rta/messagebundle.properties" size="4677">
+  </module>
+  <module name="sap/ui/rta/messagebundle_ar.properties" size="9757">
+  </module>
+  <module name="sap/ui/rta/messagebundle_bg.properties" size="11901">
+  </module>
+  <module name="sap/ui/rta/messagebundle_ca.properties" size="5009">
+  </module>
+  <module name="sap/ui/rta/messagebundle_cs.properties" size="5223">
+  </module>
+  <module name="sap/ui/rta/messagebundle_da.properties" size="4780">
+  </module>
+  <module name="sap/ui/rta/messagebundle_de.properties" size="5191">
+  </module>
+  <module name="sap/ui/rta/messagebundle_el.properties" size="11094">
+  </module>
+  <module name="sap/ui/rta/messagebundle_en.properties" size="4660">
+  </module>
+  <module name="sap/ui/rta/messagebundle_en_US_sappsd.properties" size="13071">
+  </module>
+  <module name="sap/ui/rta/messagebundle_en_US_saptrc.properties" size="5810">
+  </module>
+  <module name="sap/ui/rta/messagebundle_es.properties" size="5047">
+  </module>
+  <module name="sap/ui/rta/messagebundle_et.properties" size="4947">
+  </module>
+  <module name="sap/ui/rta/messagebundle_fi.properties" size="5312">
+  </module>
+  <module name="sap/ui/rta/messagebundle_fr.properties" size="5185">
+  </module>
+  <module name="sap/ui/rta/messagebundle_hi.properties" size="10363">
+  </module>
+  <module name="sap/ui/rta/messagebundle_hr.properties" size="5338">
+  </module>
+  <module name="sap/ui/rta/messagebundle_hu.properties" size="5772">
+  </module>
+  <module name="sap/ui/rta/messagebundle_it.properties" size="4814">
+  </module>
+  <module name="sap/ui/rta/messagebundle_iw.properties" size="8261">
+  </module>
+  <module name="sap/ui/rta/messagebundle_ja.properties" size="6849">
+  </module>
+  <module name="sap/ui/rta/messagebundle_kk.properties" size="11655">
+  </module>
+  <module name="sap/ui/rta/messagebundle_ko.properties" size="6418">
+  </module>
+  <module name="sap/ui/rta/messagebundle_lt.properties" size="5177">
+  </module>
+  <module name="sap/ui/rta/messagebundle_lv.properties" size="5448">
+  </module>
+  <module name="sap/ui/rta/messagebundle_ms.properties" size="4762">
+  </module>
+  <module name="sap/ui/rta/messagebundle_nl.properties" size="4837">
+  </module>
+  <module name="sap/ui/rta/messagebundle_no.properties" size="4772">
+  </module>
+  <module name="sap/ui/rta/messagebundle_pl.properties" size="5533">
+  </module>
+  <module name="sap/ui/rta/messagebundle_pt.properties" size="5052">
+  </module>
+  <module name="sap/ui/rta/messagebundle_ro.properties" size="5152">
+  </module>
+  <module name="sap/ui/rta/messagebundle_ru.properties" size="10422">
+  </module>
+  <module name="sap/ui/rta/messagebundle_sh.properties" size="5297">
+  </module>
+  <module name="sap/ui/rta/messagebundle_sk.properties" size="5235">
+  </module>
+  <module name="sap/ui/rta/messagebundle_sl.properties" size="4868">
+  </module>
+  <module name="sap/ui/rta/messagebundle_sv.properties" size="4998">
+  </module>
+  <module name="sap/ui/rta/messagebundle_th.properties" size="10928">
+  </module>
+  <module name="sap/ui/rta/messagebundle_tr.properties" size="5179">
+  </module>
+  <module name="sap/ui/rta/messagebundle_uk.properties" size="10678">
+  </module>
+  <module name="sap/ui/rta/messagebundle_vi.properties" size="7596">
+  </module>
+  <module name="sap/ui/rta/messagebundle_zh_CN.properties" size="5593">
+  </module>
+  <module name="sap/ui/rta/messagebundle_zh_TW.properties" size="5934">
+  </module>
+  <module name="sap/ui/rta/model/ElementPreprocessor.js" size="9383" compressedSize="2959">
+    <description>! SAP UI development toolkit for HTML5 (SAPUI5)&#xA;&#xA;(c) Copyright 2009-2016 SAP SE. All rights reserved</description>
+    <requires>
+      <module name="jquery.sap.global.js"/>
+    </requires>
+  </module>
+  <module name="sap/ui/rta/plugin/CreateContainer.js" size="5287" compressedSize="2483">
+    <description>Provides class sap.ui.rta.plugin.Remove.</description>
+    <requires>
+      <module name="sap/ui/dt/Plugin.js"/>
+      <module name="sap/ui/fl/Utils.js"/>
+      <module name="sap/ui/rta/Utils.js"/>
+      <module name="sap/ui/dt/OverlayRegistry.js"/>
+      <module name="jquery.sap.global.js"/>
+    </requires>
+  </module>
+  <module name="sap/ui/rta/plugin/DragDrop.js" size="5086" compressedSize="2314">
+    <description>Provides class sap.ui.rta.plugin.DragDrop.</description>
+    <requires>
+      <module name="jquery.sap.global.js"/>
+      <module name="sap/ui/dt/plugin/ControlDragDrop.js"/>
+      <module name="sap/ui/rta/plugin/RTAElementMover.js"/>
+    </requires>
+  </module>
+  <module name="sap/ui/rta/plugin/MultiSelection.js" size="4931" compressedSize="2322">
+    <description>Provides class sap.ui.dt.plugin.MultiSelection.</description>
+    <requires>
+      <module name="sap/ui/dt/Plugin.js"/>
+      <module name="sap/ui/dt/ElementUtil.js"/>
+      <module name="sap/ui/rta/Utils.js"/>
+      <module name="jquery.sap.global.js"/>
+    </requires>
+  </module>
+  <module name="sap/ui/rta/plugin/RTAElementMover.js" size="4404" compressedSize="1525">
+    <description>Provides class sap.ui.rta.plugin.RTAElementMover.</description>
+    <requires>
+      <module name="sap/ui/dt/plugin/ElementMover.js"/>
+      <module name="sap/ui/dt/OverlayUtil.js"/>
+      <module name="sap/ui/dt/ElementUtil.js"/>
+      <module name="sap/ui/fl/Utils.js"/>
+      <module name="sap/ui/rta/Utils.js"/>
+      <module name="sap/ui/rta/command/CommandFactory.js"/>
+      <module name="jquery.sap.global.js"/>
+    </requires>
+  </module>
+  <module name="sap/ui/rta/plugin/Remove.js" size="5942" compressedSize="2519">
+    <description>Provides class sap.ui.rta.plugin.Remove.</description>
+    <requires>
+      <module name="sap/ui/dt/Plugin.js"/>
+      <module name="sap/ui/rta/Utils.js"/>
+      <module name="sap/ui/rta/command/CompositeCommand.js"/>
+      <module name="jquery.sap.global.js"/>
+    </requires>
+  </module>
+  <module name="sap/ui/rta/plugin/Rename.js" size="10810" compressedSize="6161">
+    <description>Provides class sap.ui.rta.plugin.Rename.</description>
+    <requires>
+      <module name="jquery.sap.global.js"/>
+      <module name="sap/ui/dt/Plugin.js"/>
+      <module name="sap/ui/dt/ElementUtil.js"/>
+      <module name="sap/ui/dt/OverlayUtil.js"/>
+      <module name="sap/ui/dt/OverlayRegistry.js"/>
+      <module name="sap/ui/rta/Utils.js"/>
+      <module name="sap/ui/dt/DOMUtil.js"/>
+    </requires>
+  </module>
+  <module name="sap/ui/rta/plugin/Selection.js" size="5045" compressedSize="2224">
+    <description>Provides class sap.ui.rta.plugin.Selection.</description>
+    <requires>
+      <module name="sap/ui/dt/Plugin.js"/>
+      <module name="sap/ui/rta/Utils.js"/>
+      <module name="jquery.sap.global.js"/>
+    </requires>
+  </module>
+  <module name="sap/ui/rta/plugin/Settings.js" size="3735" compressedSize="1709">
+    <description>Provides class sap.ui.rta.plugin.Settings.</description>
+    <requires>
+      <module name="sap/ui/dt/Plugin.js"/>
+      <module name="jquery.sap.global.js"/>
+    </requires>
+  </module>
+  <module name="sap/ui/rta/plugin/additionalElements/AddElementsDialog.js" size="9295" compressedSize="4615">
+    <description>! SAP UI development toolkit for HTML5 (SAPUI5)&#xA;&#xA;(c) Copyright 2009-2016 SAP SE. All rights reserved</description>
+    <requires>
+      <module name="jquery.sap.global.js"/>
+      <module name="sap/ui/rta/library.js"/>
+      <module name="sap/ui/rta/Utils.js"/>
+      <module name="sap/ui/dt/OverlayRegistry.js"/>
+      <module name="sap/ui/core/Control.js"/>
+      <module name="sap/ui/commons/Label.js"/>
+      <module name="sap/ui/commons/LabelDesign.js"/>
+      <module name="sap/m/Dialog.js"/>
+      <module name="sap/ui/model/json/JSONModel.js"/>
+      <module name="sap/m/SearchField.js"/>
+      <module name="sap/m/Button.js"/>
+      <module name="sap/m/Toolbar.js"/>
+      <module name="sap/m/ToolbarSpacer.js"/>
+      <module name="sap/ui/model/Filter.js"/>
+      <module name="sap/ui/model/FilterOperator.js"/>
+      <module name="sap/ui/rta/controlAnalyzer/ControlAnalyzerFactory.js"/>
+      <module name="sap/ui/rta/command/CommandFactory.js"/>
+      <module name="sap/ui/rta/command/CompositeCommand.js"/>
+      <module name="sap/m/List.js"/>
+      <module name="sap/m/CustomListItem.js"/>
+      <module name="sap/m/ListType.js"/>
+      <module name="sap/m/ScrollContainer.js"/>
+      <module name="sap/ui/model/Sorter.js"/>
+      <module name="sap/ui/dt/ElementUtil.js"/>
+      <module name="sap/m/VBox.js"/>
+    </requires>
+  </module>
+  <module name="sap/ui/rta/plugin/additionalElements/AdditionalElementsAnalyzer.js" size="10496" compressedSize="4485">
+    <description>! SAP UI development toolkit for HTML5 (SAPUI5)&#xA;&#xA;(c) Copyright 2009-2016 SAP SE. All rights reserved</description>
+    <requires>
+      <module name="sap/ui/comp/odata/MetadataAnalyser.js"/>
+      <module name="sap/ui/comp/smartfield/AnnotationHelper.js"/>
+      <module name="sap/ui/core/StashedControlSupport.js"/>
+      <module name="sap/ui/dt/ElementUtil.js"/>
+      <module name="sap/ui/rta/Utils.js"/>
+      <module name="jquery.sap.global.js"/>
+    </requires>
+  </module>
+  <module name="sap/ui/rta/plugin/additionalElements/AdditionalElementsPlugin.js" size="19692" compressedSize="8694">
+    <description>! SAP UI development toolkit for HTML5 (SAPUI5)&#xA;&#xA;(c) Copyright 2009-2016 SAP SE. All rights reserved</description>
+    <requires>
+      <module name="jquery.sap.global.js"/>
+      <module name="sap/ui/dt/Plugin.js"/>
+      <module name="sap/ui/model/json/JSONModel.js"/>
+      <module name="sap/ui/dt/ElementUtil.js"/>
+      <module name="sap/ui/dt/OverlayRegistry.js"/>
+      <module name="sap/ui/rta/Utils.js"/>
+      <module name="sap/ui/core/StashedControlSupport.js"/>
+      <module name="sap/ui/dt/ElementDesignTimeMetadata.js"/>
+    </requires>
+  </module>
+  <module name="sap/ui/rta/test/controlEnablingCheck.js" size="10369" compressedSize="3183" excludeFromAllInOne="true">
+    <description>! SAP UI development toolkit for HTML5 (SAPUI5)&#xA;&#xA;(c) Copyright 2009-2016 SAP SE. All rights reserved</description>
+    <requires>
+      <module name="sap/ui/core/UIComponent.js"/>
+      <module name="sap/ui/core/ComponentContainer.js"/>
+      <module name="sap/ui/core/mvc/XMLView.js"/>
+      <module name="sap/ui/rta/command/CommandFactory.js"/>
+      <module name="sap/ui/dt/ElementUtil.js"/>
+      <module name="sap/ui/dt/ElementDesignTimeMetadata.js"/>
+      <module name="sap/ui/fl/ChangePersistenceFactory.js"/>
+      <module name="sap/ui/fl/ChangePersistence.js"/>
+      <module name="jquery.sap.global.js"/>
+    </requires>
+  </module>
+  <module name="sap/ui/rta/ui/AddElementsDialog.js" size="19177" compressedSize="9383">
+    <description>! SAP UI development toolkit for HTML5 (SAPUI5)&#xA;&#xA;(c) Copyright 2009-2016 SAP SE. All rights reserved</description>
+    <requires>
+      <module name="jquery.sap.global.js"/>
+      <module name="sap/ui/rta/library.js"/>
+      <module name="sap/ui/rta/Utils.js"/>
+      <module name="sap/ui/dt/OverlayRegistry.js"/>
+      <module name="sap/ui/core/Control.js"/>
+      <module name="sap/ui/commons/Label.js"/>
+      <module name="sap/ui/commons/LabelDesign.js"/>
+      <module name="sap/m/Dialog.js"/>
+      <module name="sap/ui/model/json/JSONModel.js"/>
+      <module name="sap/m/SearchField.js"/>
+      <module name="sap/m/Button.js"/>
+      <module name="sap/m/Toolbar.js"/>
+      <module name="sap/m/ToolbarSpacer.js"/>
+      <module name="sap/ui/model/Filter.js"/>
+      <module name="sap/ui/model/FilterOperator.js"/>
+      <module name="sap/ui/rta/controlAnalyzer/ControlAnalyzerFactory.js"/>
+      <module name="sap/ui/rta/command/CommandFactory.js"/>
+      <module name="sap/ui/rta/command/CompositeCommand.js"/>
+      <module name="sap/m/List.js"/>
+      <module name="sap/m/CustomListItem.js"/>
+      <module name="sap/m/ListType.js"/>
+      <module name="sap/m/ScrollContainer.js"/>
+      <module name="sap/ui/model/Sorter.js"/>
+      <module name="sap/ui/dt/ElementUtil.js"/>
+    </requires>
+  </module>
+  <module name="sap/ui/rta/ui/SettingsDialog.js" size="7713" compressedSize="3635">
+    <description>! SAP UI development toolkit for HTML5 (SAPUI5)&#xA;&#xA;(c) Copyright 2009-2016 SAP SE. All rights reserved</description>
+    <requires>
+      <module name="jquery.sap.global.js"/>
+      <module name="sap/ui/rta/library.js"/>
+      <module name="sap/ui/core/Control.js"/>
+      <module name="sap/m/Dialog.js"/>
+      <module name="sap/ui/layout/VerticalLayout.js"/>
+      <module name="sap/m/Label.js"/>
+      <module name="sap/m/Input.js"/>
+      <module name="sap/m/Select.js"/>
+      <module name="sap/ui/core/Item.js"/>
+      <module name="sap/m/Button.js"/>
+      <module name="sap/m/CheckBox.js"/>
+      <module name="sap/ui/rta/command/CommandFactory.js"/>
+      <module name="sap/ui/rta/command/CompositeCommand.js"/>
+      <module name="sap/ui/dt/ElementUtil.js"/>
+    </requires>
+  </module>
+  <module name="sap/ui/rta/ui/ToolsMenu.js" size="9498" compressedSize="4615">
+    <description>Provides control sap.ui.rta.ToolsMenu.</description>
+    <requires>
+      <module name="sap/ui/rta/library.js"/>
+      <module name="sap/ui/core/Control.js"/>
+      <module name="sap/m/Toolbar.js"/>
+      <module name="sap/m/ToolbarLayoutData.js"/>
+      <module name="sap/m/ToolbarSpacer.js"/>
+      <module name="sap/m/Label.js"/>
+      <module name="sap/ui/core/Popup.js"/>
+      <module name="sap/ui/fl/registry/Settings.js"/>
+      <module name="sap/ui/fl/Utils.js"/>
+      <module name="jquery.sap.global.js"/>
+    </requires>
+  </module>
+  <module name="sap/ui/rta/ui/ToolsMenuRenderer.js" size="931" compressedSize="313">
+    <description>Provides default renderer for control sap.ui.rta.ToolsMenu</description>
+    <requires>
+      <module name="jquery.sap.global.js"/>
+    </requires>
+  </module>
+  <module name="sap/ui/rta/util/FakeLrepConnectorLocalStorage.js" size="2780" compressedSize="844">
+    <description>! SAP UI development toolkit for HTML5 (SAPUI5)&#xA;&#xA;(c) Copyright 2009-2016 SAP SE. All rights reserved</description>
+    <requires>
+      <module name="sap/ui/rta/util/FakeLrepLocalStorage.js"/>
+      <module name="jquery.sap.global.js"/>
+    </requires>
+  </module>
+  <module name="sap/ui/rta/util/FakeLrepLocalStorage.js" size="3891" compressedSize="1442">
+    <description>! SAP UI development toolkit for HTML5 (SAPUI5)&#xA;&#xA;(c) Copyright 2009-2016 SAP SE. All rights reserved</description>
+    <requires>
+      <module name="jquery.sap.global.js"/>
+    </requires>
+  </module>
+  <module name="sap/ui/rta/view/RemoveElementDialog.fragment.xml" size="742">
+    <requires>
+      <module name="sap/ui/core/Fragment.js"/>
+      <module name="sap/m/Dialog.js"/>
+      <module name="sap/ui/layout/VerticalLayout.js"/>
+      <module name="sap/m/Button.js"/>
+    </requires>
+  </module>
+</library>

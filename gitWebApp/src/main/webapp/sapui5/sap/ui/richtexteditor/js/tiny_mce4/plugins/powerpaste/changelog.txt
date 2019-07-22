@@ -1,0 +1,9 @@
+Version 2.1.7 (2016-09-22)
+  [BUG] Paste for with allow_images disabled would remove editor contents in FF. #TINY-602
+  [BUG] Some inline styles where stripped when pasting word content that contains conflicting document level styles. #TBIO-4206
+  [BUG] Non-organised lists with '-' characters where being imported as organised lists from word. #EL-5902
+  [BUG] Bullet nesting was not preserved when copying and pasting from Word on some browsers. #EL-5898
+  [BUG] Some Word anchors where not properly removed from lists. #EL-5911
+  [BUG] Significantly reduced flash movie size used for image import on some browsers. #TINY-609
+  [BUG] Fixed XSS issue with flash movie used for image import on some browsers. #TINY-592
+  [BUG] Fixed issue where anchors where removed when pasting from a non Word source. #TINY-606

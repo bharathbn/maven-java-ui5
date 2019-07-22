@@ -1,0 +1,81 @@
+{
+  "_version": "1.1.0",
+  "resources": [
+    {
+      "name": ".theming",
+      "theme": "sap_platinum"
+    },
+    {
+      "name": "Calendar.css",
+      "theme": "sap_platinum"
+    },
+    {
+      "name": "Menu.css",
+      "theme": "sap_platinum"
+    },
+    {
+      "name": "img-RTL/create.txt",
+      "theme": "sap_platinum"
+    },
+    {
+      "name": "img-RTL/menu/tf_err.png",
+      "theme": "sap_platinum"
+    },
+    {
+      "name": "img-RTL/menu/tf_std.png",
+      "theme": "sap_platinum"
+    },
+    {
+      "name": "img-RTL/menu/tf_warn.png",
+      "theme": "sap_platinum"
+    },
+    {
+      "name": "img/create.txt",
+      "theme": "sap_platinum"
+    },
+    {
+      "name": "img/menu/tf_err.png",
+      "theme": "sap_platinum"
+    },
+    {
+      "name": "img/menu/tf_std.png",
+      "theme": "sap_platinum"
+    },
+    {
+      "name": "img/menu/tf_warn.png",
+      "theme": "sap_platinum"
+    },
+    {
+      "name": "library-RTL-dbg.css",
+      "isDebug": true,
+      "theme": "sap_platinum"
+    },
+    {
+      "name": "library-RTL.css",
+      "theme": "sap_platinum"
+    },
+    {
+      "name": "library-dbg.css",
+      "isDebug": true,
+      "theme": "sap_platinum"
+    },
+    {
+      "name": "library-parameters.json",
+      "theme": "sap_platinum"
+    },
+    {
+      "name": "library.css",
+      "theme": "sap_platinum"
+    },
+    {
+      "name": "library.less",
+      "designtime": true,
+      "theme": "sap_platinum"
+    },
+    {
+      "name": "library.source.less",
+      "designtime": true,
+      "theme": "sap_platinum"
+    }
+  ]
+}

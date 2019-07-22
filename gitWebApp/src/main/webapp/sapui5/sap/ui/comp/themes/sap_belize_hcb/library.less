@@ -1,0 +1,1389 @@
+/* NOTE: This file was generated as an optimized version of "library.source.less" for the Theme Designer. */
+
+/*!
+ * ${copyright}
+ */
+@import "../../../../../../Base/baseLib/baseTheme/base.less"; /* ORIGINAL IMPORT PATH: "../../../../../sap/ui/core/themes/base/base.less" */
+
+@import "../../../../../sap/ui/core/themes/base/global.less";
+/* START "shared.css" */
+/* This CSS shares it rules with all other CSS of this library */
+.sapUiCompDirectionLTR {
+	direction: ltr;
+}
+/* END "shared.css" */
+
+
+/* START "DialogContent.css" */
+
+/* ============================================= */
+/* CSS for control sap.ui.comp/DialogContent.control */
+/* ============================================= */
+
+.sapUiCompDialogContentFieldListContainer{
+	border-right: 1px solid @sapUiContentForegroundBorderColor;
+}
+
+.sapUiCompDialogContentFieldListContainerTop{
+	background-color: @sapUiContentForegroundColor;
+	border-bottom: 1px solid @sapUiContentForegroundBorderColor;
+}
+
+.sapUiCompDialogContentFieldListContainerTop > div {
+	width: inherit !important;
+    margin-left: 2px !important;
+    margin-right: 2px !important;
+    margin-top: 0px !important;
+    margin-bottom: 0px !important;
+}
+
+.sapUiCompDialogContentMiddle{
+	border-right: 1px solid @sapUiContentForegroundBorderColor;
+	min-width: 40px;
+	max-width: 60px;
+}
+
+.sapUiCompDialogContentMiddle > div:first-child{
+	margin:auto;
+	text-align:center;
+}
+
+.sapUiCompDialogContent{
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+}
+
+.sapUiCompDialogContentHeader{
+	flex-shrink: 0;
+	/*margin-left: 15px;
+	margin-right: 15px;
+	margin-top: 15px;
+	margin-bottom: 3px;
+    padding: 3px;*/
+}
+
+.sapUiCompDialogContentButtonAddFieldContainer{
+	display:flex;
+	align-items:center;
+	padding: 10px;
+}
+
+.sapUiCompDialogContentBodyFlexItem{
+	flex-grow:0;
+}
+
+.sapUiCompDialogBody{
+	position: relative;
+	display:flex;
+}
+
+/* END "DialogContent.css" */
+
+/* START "EditableVariantItem.css" */
+
+/* ============================================= */
+/* CSS for control sap.ui.comp/EditableVariantItem.control */
+/* ============================================= */
+
+/* END "EditableVariantItem.css" */
+
+/* START "FieldList.css" */
+
+/* ============================================= */
+/* CSS for control sap.ui.comp/FieldList.control */
+/* ============================================= */
+
+.sapUiCompFieldList{
+}
+/* END "FieldList.css" */
+
+/* START "FieldListNode.css" */
+
+/* ============================================= */
+/* CSS for control sap.ui.comp/FieldListNode.control */
+/* ============================================= */
+
+.sapUiCompFieldListNode{
+    padding-left: 20px;
+}
+
+.sapUiCompFieldListNodeBorder{
+	position: relative;
+}
+
+.sapUiCompFieldListNodeLabelInputField{
+
+}
+
+.sapUiCompFieldListNodeIsSelected{
+	background-color: @sapUiListSelectionBackgroundColor;
+}
+
+.sapUiCompFieldListNodeIsHidden{
+
+}
+
+.sapUiCompFieldListNodeIsVisible{
+
+}
+/* END "FieldListNode.css" */
+
+/* START "FieldSelector.css" */
+
+/* ============================================= */
+/* CSS for control sap.ui.comp/FieldSelector.control */
+/* ============================================= */
+
+.sapUiCompFieldSelectorHeader{
+  margin-right: 2px;
+  margin-left: 2px;
+}
+
+.sapUiCompFieldSelectorHeaderSearch{
+	margin-right: 4px;	
+}
+
+.sapUiCompFieldSelectorComboBox{	
+	display: flex;
+}
+
+.sapUiCompFieldSelectorCreateButton{	
+	margin-left:2px;
+}
+
+.sapUiCompFieldSelectorHeaderText{
+  margin: auto;
+}
+
+.sapUiCompFieldSelectorScrollContainer{
+  width: 100%;
+}
+.sapUiCompFieldSelectorScrollContainer>div:first-child{
+  width: 100%;
+}
+
+.sapUiCompFieldSelectorHeaderEntitySelection > div:first-child{
+	margin:auto;
+}
+
+/* END "FieldSelector.css" */
+
+/* START "FilterBar.css" */
+.sapUiCompFilterBar {
+	border-bottom: 1px solid darken(@sapUiPageHeaderBackground, 8);
+}
+
+.sapFDynamicPageHeaderContent .sapUiCompFilterBar>.sapUiRespGridSpanXL12 {
+	width: 100%;
+}
+
+.sapFDynamicPageHeaderContent .sapUiCompFilterBar {
+	border-bottom: none;
+}
+
+.compVHSearch .sapUiCompFilterBarPhone.sapUiRespGrid.sapUiRespGridHSpace0 {
+	padding-left: 0rem;
+}
+
+.sapUiCompFilterBarPhone.sapUiRespGrid.sapUiRespGridHSpace0 {
+	padding-top: 0rem;
+	padding-bottom: 0rem;
+	padding-right: 1rem;
+	padding-left: 1rem;
+}
+
+.sapFDynamicPageHeaderContent .sapUiCompFilterBarPhone.sapUiRespGrid.sapUiRespGridHSpace0 {
+	padding-top: 0rem;
+	padding-bottom: 0rem;
+	padding-right: 0rem;
+	padding-left: 0rem;
+}
+
+
+.sapUiCompFilterBarNonPhone.sapUiRespGrid.sapUiRespGridHSpace0 {
+	padding-top: 1rem;
+	padding-bottom: 1rem;
+
+	padding-right: 2rem;
+	padding-left: 2rem;
+}
+
+.sapFDynamicPageHeaderContent .sapUiCompFilterBarNonPhone.sapUiRespGrid.sapUiRespGridHSpace0 {
+	padding-top: 0rem;
+	padding-bottom: 0rem;
+
+	padding-right: 0rem;
+	padding-left: 0rem;
+}
+
+.sapUiSizeCondensed .sapUiCompFilterBarNonPhone.sapUiRespGrid.sapUiRespGridHSpace0 {
+	padding-top: 0rem;
+	padding-bottom: 0.2rem;
+}
+
+
+.sapUiCompFilterBar .sapMSlt,.sapMSltLabel,.sapMSltArrow {
+    display: block;
+}
+
+.sapUiCompFilterBar.sapUiRespGridMedia-Std-Desktop.sapUiRespGridHSpace0 > .sapUiRespGridSpanL12 {
+	width: 100%;
+}
+
+.sapUiSizeCompact .sapMBtn.sapUiCompFilterBarPaddingRightBtn {
+	padding-right: 0.5rem;
+}
+
+.sapMBtn.sapUiCompFilterBarPaddingRightBtn  {
+	padding-right: 0.5rem;
+}
+
+.sapUiCompFilterBar .sapUiCompVarMngmt .sapUICompVarMngmtText {
+	padding-left: 0;
+}
+
+.sapUiCompFilterBarNonPhone .sapMIBar .sapMBarChild:first-child {
+	margin-left: 0;
+}
+
+.sapUiCompFilterBarNonPhone .sapMIBar>.sapMBarChild:last-child {
+	margin-right: 0;
+}
+
+.sapUiCompFilterBarDialog .sapUiRespGridSpanL10.sapUiRespGridSpanM10.sapUiRespGridSpanS12 {
+	padding-left: 0rem;
+}
+
+.sapUiCompFilterBarDialogForm .sapUiFormResGridMain {
+	padding-top: 0rem;
+	padding-bottom: 0rem;
+	padding-left: 0rem;
+	padding-right: 0rem;
+}
+
+
+.sapUiCompFilterBarDialogForm .sapMDialogScrollCont {
+	padding-left: 1rem;
+	padding-right: 1rem;
+}
+
+.sapUiCompFilterBarDialogNonPhone .sapMDialogScrollCont {
+	padding-left: 2rem;
+	padding-right: 2rem;
+}
+
+.sapUiCompFilterBarDialogForm .sapUiFormResGridMain > div {
+	padding-bottom: 1rem !important;
+}
+
+.sapUiCompFilterBarDialogForm .sapUiFormM .sapUiRespGrid.sapUiRespGridVSpace0>div {
+	padding-bottom: 1rem;
+}
+
+.sapUiCompFilterBarDialog .sapUiCompVarMngmt .sapUICompVarMngmtText {
+	padding-left: 0.25em;
+}
+.sapUiCompFilterBarDialog .sapUiCompVarMngmt .sapMLabel {
+	padding-right: 0em;
+}
+
+.sapUiCompFilterBarDialog .sapUiCompVarMngmt .sapMLabel:after {
+	content: "";
+}
+
+.sapUiCompFilterBarDialog .sapUiForm .sapUiCompFilterBarAddFilterLabel.sapMLabel:after {
+	content: "";
+}
+.sapUiCompFilterBarDialog .sapUiForm .sapUiCompFilterBarAddFilterLabelNoGroup.sapMLabel:after {
+	content: "";
+}
+
+.sapUiCompFilterBarDialog .sapUiForm .sapUiRGLContainerCont {
+	padding-top: 1rem;
+}
+
+.sapUiCompFilterBarDialog .sapUiRGLContainer > .sapUiFormTitle {
+	margin-bottom: 0rem;
+}
+
+.sapUiCompFilterBarDialog .sapMFooter-CTX {
+	padding-right: 0.25rem;
+}
+
+.sapUiCompFilterBarButtonHide {
+	display: none !important;
+}
+
+.sapUiForm .sapUiCompFilterBarAddFilterLabel.sapMLabel {
+	position: absolute !important;
+	right: 10px;
+	width: auto;
+}
+
+
+.sapUiTheme-sap_hcb .sapUiCompFilterBarDialog .sapUiFormTitleH4 {
+	font-size: 1rem;
+}
+
+.sapUiCompFilterBarBasicArea {
+}
+
+.sapUiCompFilterBarBasicArea .sapUiCompFilterLabel.sapMLabel:after {
+	content: ":";
+}
+
+.sapUiCompFilterBarBasicArea .sapBasicSearchFilter.sapMLabel:after {
+	content: "";
+}
+
+.sapUiCompFilterBarWidth100 {
+	width: 100%;
+}
+
+.sapUiCompFilterBarCheckBox {
+	margin-left: 2rem;
+	width: 2rem;
+}
+
+.sapUiSizeCompact .sapMInputBase.sapUiCompFilterBarFilterControl{
+	padding-right: 2rem;
+}
+
+.sapUiCompFilterBarButtonGroup {
+   padding-left: 1rem;
+}
+
+.sapMIBar .sapUiCompFilterBarButtonGroup.sapMBarChild {
+   margin-left: 0rem;
+}
+
+.sapMIBar .sapUiCompFilterBarMarginLeft.sapMBarChild:first-child {
+	margin-left: 0rem;
+}
+
+.sapUiCompFilterBar.sapUiRespGrid.sapUiRespGridVSpace1 > div {
+	margin-bottom: 0rem;
+	margin-left: 0rem;
+	margin-right: 0rem;
+	overflow: visible;
+}
+
+.sapUiCompFilterBar .sapUiCompFilterBarPaddingForm .sapUiFormResGridMain {
+	background-color: transparent;
+}
+
+.sapUiCompFilterBar .sapUiFormM .sapUiRGLContainerCont {
+	padding-bottom: 0.5rem;
+}
+
+.sapUiCompFilterBarDialogPaddingBottom {
+	padding-bottom: 1rem;
+}
+
+.sapMBtn.sapUiCompFilterBarRemoveMinWidth {
+	min-width: auto;
+}
+
+.sapUiCompFilterBarPaddingRight {
+	padding-right: 1rem;
+}
+
+.sapUiCompFilterBarPaddingTop {
+	padding-top: 0.5rem;
+}
+
+.sapUiSizeCondensed .sapUiCompFilterBarPaddingTop {
+	padding-top: 0rem;
+}
+
+.sapMTB.sapUiCompFilterBarToolbarMarker {
+	border-bottom-style: none;
+}
+
+.sapUiCompFilterBarToolbar {
+}
+
+.sapUiCompFilterBarToolbar .sapMBarChild.sapMSF {
+	min-width: 4rem;
+	max-width: 28rem;
+}
+
+.sapUiCompFilterBarToolbarBasicSearchNoVariant .sapMBarChild.sapMSF {
+	margin-left: 0rem;
+}
+
+.sapUiCompFilterBarDialog .sapUiFormM.sapUiFormResGridLastL {
+	padding-bottom: 0rem;
+}
+
+.sapUiCompFilterBarDialog .sapUiFormM .sapUiRGLContainerCont {
+	padding-bottom: 0rem;
+}
+
+.sapUiCompFilterBarPaddingForm.sapUiFormResGrid > div {
+	padding-top: 0rem;
+	padding-right: 0rem;
+	padding-bottom: 0rem;
+	padding-left: 0rem;
+}
+
+.sapUiCompFilterBarPaddingPanel .sapMPanelContent {
+	padding-top: 0.2rem;
+	padding-right: 0.2rem;
+	padding-bottom: 0rem;
+	padding-left: 0.1rem;
+
+	background-color: transparent;
+
+	border-bottom: 0px;
+}
+
+.sapUiCompFilterBarToolbar  {
+}
+
+.sapUiCompFilterBarFloatRight {
+	float: right;
+}
+
+.sapUiCompFilterBarFloatLeft {
+	float: left;
+}
+
+html[dir='rtl'] .sapUiCompFilterBarFloatRight {
+	float: left;
+}
+
+html[dir='rtl'] .sapUiCompFilterBarFloatLeft {
+	float: right;
+}
+
+.sapMBarRight, .sapMBarPH {
+	padding-left: 0.25rem;
+}
+
+.sapUiCompFilterBarListItem  {
+	margin-left: -0.75rem;
+}
+
+.sapUiCompFilterBarListItem > div:nth-child(n+1) > label{
+	padding-top: 1rem;
+}
+
+.sapUiCompFilterBarListItemCompact {
+	margin-left: -0.5rem;
+}
+
+.sapUiCompFilterBarListItemCompact > div:nth-child(n+1) > label{
+	padding-top: 0.5rem;
+}
+
+.sapUiCompFilterBar .sapMPanelWrappingDiv {
+   border-bottom: 0px;
+}
+
+.sapUiCompFilterBarDialogForm .sapUiFormResGrid>div {
+	background-color: transparent;
+}
+.sapUiCompAddRemoveFilterDialog .sapMListBGSolid .sapMLIB {
+    background-color: transparent;
+}
+
+.sapUiCompFilterBarHint.sapMText {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	padding-top: 0.5rem;
+}
+
+.sapUiCompFilterBarCTPaddingLeft, .sapUiSizeCompact .sapMInputBaseWidthPadding.sapUiCompFilterBarCTPaddingLeft {
+	padding-left: 1rem;
+}
+.sapUiCompFilterBarCTMarginLeft, .sapUiSizeCompact .sapMInputBaseWidthPadding.sapUiCompFilterBarCTMarginLeft {
+	margin-left: 1rem;
+}
+
+.sapUiCompFilterBarPaddingBottom {
+	padding-bottom: 0.3rem;
+}
+
+/* END "FilterBar.css" */
+
+/* START "FullScreenDialog.css" */
+/* =============================================== */
+/* CSS for sap.ui.comp/util/FullScreenUtil dialogs */
+/* =============================================== */
+.sapUiCompSmartFullScreenDialog .sapMDialogScrollCont {
+	height: 100%;
+}
+/* END "FullScreenDialog.css" */
+
+/* START "Group.css" */
+
+/* ============================================= */
+/* CSS for control sap.ui.comp/Group.control */
+/* ============================================= */
+
+
+/* END "Group.css" */
+
+/* START "GroupC.css" */
+
+/* ============================================= */
+/* CSS for control sap.ui.comp/GroupC.control */
+/* ============================================= */
+
+/* END "GroupC.css" */
+
+/* START "GroupElement.css" */
+
+/* ============================================= */
+/* CSS for control sap.ui.comp/GroupElement.control */
+/* ============================================= */
+
+.sapUiCompGroupElementVBox{
+	margin-bottom: 1rem;
+}
+
+.sapUiForm .sapUiCompGroupElementVBox .sapMLabel:after {
+    content: ":";
+}
+
+.sapUiForm .sapUiCompGroupElementHBoxPadding {
+	padding-left: 0.5rem
+}
+/* END "GroupElement.css" */
+
+/* START "GroupElementC.css" */
+
+/* ============================================= */
+/* CSS for control sap.ui.comp/GroupElement.control */
+/* ============================================= */
+
+/* END "GroupElementC.css" */
+
+/* START "Input.css" */
+.sapUiCompInput{
+}
+/* END "Input.css" */
+
+/* START "NavigationPopover.css" */
+/* ============================================= */
+/* CSS for control sap.ui.comp.navpopover/NavigationPopover.control */
+/* ============================================= */
+.navpopoversmallheader .sapUiRLContainer .sapUiFormTitle {
+	margin-bottom: 0rem;
+}
+
+.navpopoversmallheader .sapUiRLContainerCont {
+	height: 0rem;
+}
+
+.navigationPopover .sapUiFormTitle {
+	white-space: normal;
+}
+
+.navigationPopoverTitleH1 .sapMLnk {
+	font-size: 1.5rem;
+}
+
+.navigationPopoverTitleH1 .sapMLnkDsbl {
+	opacity: 1;
+	color: @sapUiText;
+}
+
+/* .sapMQuickViewPage*/
+.navigationPopover .navigationPopoverThumbnail {
+	font-family: SAP-icons;
+	font-size: 2.5rem;
+	font-weight: normal;
+	/* without important, the width will be overwritten with 100%*/
+	width: 3rem !important;
+	height: 3rem;
+	margin-right: .75rem;
+}
+
+.navigationPopover .navigationPopoverTitle {
+	font-size: 1.25rem;
+	font-weight: normal;
+}
+
+.navigationPopover .navigationPopoverSubTitle {
+	color: @sapUiContentLabelColor;
+}
+
+/* Overwrite background of 'related apps' section */
+.navigationPopover .navigationPopoverAvailableLinks .sapUiFormResLayout.sapUiFormBackgrTranslucent>div {
+	background-color: transparent;
+}
+.navigationPopover .navigationPopoverAvailableLinks {
+	background: darken(@sapUiGlobalBackgroundColor, 4);
+	padding-top: 0.5rem;
+	padding-bottom: 0.5rem;
+	padding-right: 1rem;
+	padding-left: 1rem;
+}
+
+/* Overwrite overflow to 'scroll' - is relevant for phone mode */
+.navigationPopover.sapMDialog .sapMDialogSection {
+	overflow: scroll !important;
+}
+/* END "NavigationPopover.css" */
+
+/* START "SmartField.css" */
+/* ============================================= */
+/* CSS for control sap.ui.comp/SmartField.control */
+/* ============================================= */
+
+.sapUiCompSmartField {
+	display: inline-block;
+	width: 100%;
+}
+
+.sapUiTableCell>.sapUiCompSmartField {
+    display: block;
+}
+
+.sapMListTblCell>.sapUiCompUOMInTable .sapUiCompSmartField>.sapMText {
+	display: block;
+}
+
+.sapMListTblCell>.sapUiCompUOMInTable .sapUiCompSmartField {
+	display: block;
+}
+
+.sapUiCompGroupElementVBox .sapUiCompSmartField {
+	display: block;
+}
+
+.sapUiSizeCompact .sapMListTblCell>.sapUiCompSmartField>.sapMObjectIdentifier {
+    margin: .5rem 0;
+}
+
+.sapMInput.sapMInputBase.smartFieldPaddingRight {
+	padding-right: 0.5rem;
+}
+
+.sapUiCompUOM .sapUiCompSmartField .sapMText {
+	position: relative;
+	top: 0.4375rem;
+}
+
+
+.sapUiCompUOM >div:nth-child(2)  {
+	max-width: 5.1rem;
+	min-width: 5rem;	
+}
+
+.sapUiSizeCompact .sapUiCompUOM >div:nth-child(2)  {
+	max-width: 5rem;
+	min-width: 5rem;	
+}
+
+.sapUiCompUOM.sapUiCompUOMInTable >div:nth-child(2)  {
+	min-width: initial;
+}
+
+.sapUiFormEdit .sapUiCompUOM .sapUiCompSmartField .sapMText {
+	top: 0rem;
+}
+
+/* Condensed size */
+.sapUiSizeCondensed .sapUiTableCell>.sapUiCompSmartField>.sapMText,
+.sapUiSizeCondensed .sapUiTableCell>.sapUiCompSmartField>.sapMLnk,
+.sapUiSizeCondensed .sapUiTableCell>.sapUiCompSmartField>.sapUiCompUOM 
+ {
+	box-sizing: border-box;
+  	padding: 0 0.5rem;
+  	line-height: 1.5rem;
+  	vertical-align: middle;
+}
+
+.sapMTB>.sapUiCompSmartField {
+	width: auto !important;
+}
+.sapUiCompSmartFieldUnit {
+	min-width: 5rem;
+}
+
+/* END "SmartField.css" */
+
+/* START "SmartFieldControl.css" */
+
+/* ============================================= */
+/* CSS for control sap.ui.comp/SmartFieldControl.control */
+/* ============================================= */
+
+/* END "SmartFieldControl.css" */
+
+/* START "SmartFilterBar.css" */
+
+/* ============================================= */
+/* CSS for control sap.ui.comp/SmartFilterBar.control */
+/* ============================================= */
+
+/* END "SmartFilterBar.css" */
+
+/* START "SmartForm.css" */
+/* ============================================= */
+/* CSS for control sap.ui.comp/SmartForm.control */
+/* ============================================= */
+.sapUiCompSmartForm {
+
+}
+
+/* ------------ fix panel expand button visualization -----------*/
+.sapUiCompSmartForm .sapUiFormTitle .sapMBtnInner > img{
+	width: 1.0rem;
+	height: 1.0rem;
+	margin: 0;
+}
+
+.sapUiCompSmartForm .sapUiForm .sapUiFormTitle > button {
+	width: auto;
+	height: auto;
+	bottom: initial;
+}
+
+.sapUiCompSmartForm .sapUiFormTitle .sapMBtnInner {
+	height: 1.125rem;
+	width: 1.25rem;
+	min-width: 0px;
+	padding: 0;
+}
+/* ------------ end fix panel expand button visualization -----------*/
+
+.sapMSemanticPage .sapUiCompSmartForm .sapMBarChild.sapMLabel {
+    font-style: normal;
+}
+
+.sapUiCompSmartForm .sapMPanelContent {
+	padding: 0rem;
+}
+
+.title {
+	font-size: 1.125rem !important;
+	margin-left: 0rem !important;
+}
+
+/* END "SmartForm.css" */
+
+/* START "SmartLabel.css" */
+
+/* ============================================= */
+/* CSS for control sap.ui.comp/SmartLabel.control */
+/* ============================================= */
+
+/* END "SmartLabel.css" */
+
+/* START "SmartLink.css" */
+
+/* ============================================= */
+/* CSS for control sap.ui.comp/SmartLink.control */
+/* ============================================= */
+
+.sapUiCompSmartLink.sapMLnkDsbl{
+  opacity: 1;
+  color: @sapUiBaseText;
+}
+
+/* Condensed size */
+.sapUiSizeCondensed .sapUiTableCell>.sapUiCompSmartLink>.sapMText,
+.sapUiSizeCondensed .sapUiTableCell>.sapUiCompSmartLink>.sapMLnk,
+.sapUiSizeCondensed .sapUiTableCell>.sapUiCompSmartLink>.sapUiCompUOM
+ {
+	box-sizing: border-box;
+  	padding: 0 0.5rem;
+  	line-height: 1.5rem;
+  	vertical-align: middle;
+}
+/* END "SmartLink.css" */
+
+/* START "SmartTable.css" */
+/* ============================================= */
+/* CSS for control sap.ui.comp/SmartTable.control */
+/* ============================================= */
+
+.sapUiCompSmartTable{	
+}
+
+.sapUiCompSmartTableHeader {
+}
+
+.sapUiCompSmartTable .sapUiCompSmartTableHeader {
+	margin: 0rem;
+}
+
+.sapUiCompSmartTable .sapUiCompSmartTableToolbar{
+	
+}
+
+.sapUiCompSmartTable .sapUiCompSmartTableToolbarHeight{
+	height: 3rem;
+}
+
+.sapUiSizeCondensed .sapUiCompSmartTable .sapUiCompSmartTableToolbarHeight {
+	height: inherit;
+}
+
+.sapUiCompSmartTable .sapUiAnalyticalTableSum input{
+	border: 0px;
+	background: inherit;
+	pointer-events: none;
+}
+
+.sapUiCompSmartTable .sapUiTableGroupHeader input{
+	border: 0px;
+	background: inherit;
+	pointer-events: none;	
+}
+
+.sapUiCompSmartTable .sapUiAnalyticalTableSum .sapMInputValHelpInner{
+	display: none;
+} 
+
+.sapUiCompSmartTable .sapUiTableGroupHeader .sapMInputValHelpInner{
+	display: none;
+} 
+
+.sapUiCompSmartTable .sapUiAnalyticalTableSum .sapMDP{
+	display: none;
+}
+
+.sapUiCompSmartTable .sapUiTableGroupHeader .sapMDP{
+	display: none;
+}
+
+.sapUiCompSmartTable .sapUiAnalyticalTableSum .sapUiCompCurrencyBold{
+	font-weight: bold;	
+}
+/* END "SmartTable.css" */
+
+/* START "SmartChart.css" */
+/* ============================================== */
+/* CSS for control sap.ui.comp/SmartChart.control */
+/* ============================================== */
+
+.sapUiCompSmartChart {	
+}
+
+.sapUiCompSmartChart .sapUiCompSmartChartToolbar {
+	padding-left: 0.25rem;
+	width: 100%;
+}
+
+.sapUiCompSmartChart .sapUiCompChartSegmented .sapUiCompChartArrowDwn.sapMSegBBtn .sapUiIcon {
+	font-size: 0.875rem;
+}
+
+.sapUiCompSmartChart .sapUiCompChartSegmented .sapMSegBBtn.sapMBtnTransparent {
+    background-color: transparent;
+}
+
+.sapUiCompSmartChart .sapUiCompChartSegmented .sapMSegBBtn.sapMBtnTransparent.sapMSegBBtnSel {
+    background-color: @sapUiSegmentedButtonSelectedBackground;
+}
+
+.sapUiCompSmartChartDetailsPopover .sapMPopoverCont{
+
+}
+.sapUiCompSmartChartDetailsPopover .sapUiCompSmartChartDetailsScrollContainer {
+	height:auto;
+	max-height: 17rem;
+}
+
+.sapUiCompSmartChart .sapUiCompSmartChartBreadcrumbs {
+	padding-top: 0.5rem;
+	max-width: 60%;
+	width:auto;
+}
+/* END "SmartChart.css" */
+
+/* START "smartVariantManagement.css" */
+
+/* ============================================= */
+/* CSS for control sap.ui.comp/smartVariantManagement.control */
+/* ============================================= */
+
+/* END "smartVariantManagement.css" */
+
+/* START "SmartVariantManagementUi2.css" */
+
+/* ============================================= */
+/* CSS for control sap.ui.comp/SmartVariantManagementUi2.control */
+/* ============================================= */
+
+/* END "SmartVariantManagementUi2.css" */
+
+/* START "test.css" */
+
+/* ============================================= */
+/* CSS for control sap.ui.comp/test.control */
+/* ============================================= */
+
+/* END "test.css" */
+
+/* START "TestColumnsPanel.css" */
+
+/* ============================================= */
+/* CSS for control sap.ui.comp/TestColumnsPanel.control */
+/* ============================================= */
+
+/* END "TestColumnsPanel.css" */
+
+/* START "Title.css" */
+
+/* ============================================= */
+/* CSS for control sap.ui.comp/Title.control */
+/* ============================================= */
+
+/* END "Title.css" */
+
+/* START "TransportDialog.css" */
+
+/* ============================================= */
+/* CSS for control sap.ui.comp/TransportDialog.control */
+/* ============================================= */
+
+.sapUiCompTransportDialog {
+
+}
+/* END "TransportDialog.css" */
+
+/* START "ValueHelpDialog.css" */
+/* FIX for IE10 */
+.compValueHelpDialog .sapMFlexItem {
+	-ms-flex-negative: 0;
+}
+
+
+/* IconToolBar Styles - Tabs */
+ .compValueHelpDialog .sapMITBContainerContent {
+	box-shadow: 0 -1px 0 rgba(0, 0, 0, 0.05); 
+	border-bottom: 0rem; 
+}
+
+
+.compValueHelpDialog .sapMITBContent {
+	padding: 0rem; 
+}
+
+
+.compValueHelpDialog .sapMITBHead {
+	margin-top: 0rem;
+	margin-left: 2rem;
+	margin-right: 2rem;
+}
+
+
+html.sap-tablet .compValueHelpDialog .sapMITBHead {
+  	margin: 0 1.5rem 0 1.5rem; 
+}
+
+html.sap-tablet .compValueHelpDialog .sapMITBScrollContainer {
+	margin-right: 0rem; 
+	margin-left: 0rem; 
+}
+
+/* required for Table */
+.compValueHelpDialog .sapUiTable .sapUiTableHdrTitle {
+	font-size: 18px; /* @sapMFontHeader4Size; */ 
+	font-weight: normal; /* @sapUiFontHeaderWeight; */
+}
+
+.compValueHelpDialog .sapMITBScrollContainer {
+	padding: 0px;
+	margin-right: 0rem; 
+	margin-left: 0rem; 
+}
+
+html.sap-tablet .sapMITBScrollContainer {
+	margin-right: 0rem; 
+	margin-left: 0rem; 
+}
+
+
+/* Tokenizer Panel */
+.sapUiSizeCompact.compValueHelpDialog .compVHBackgroundTransparent .sapMPanelHdr {
+	font-size: 14px; /* @sapMFontMediumSize; */	
+	font-weight: normal;
+	height: 1.5rem;
+	line-height: 1.5rem;
+}
+
+.compValueHelpDialog .compVHBackgroundTransparent .sapMPanelBG {
+ 	background-color: Transparent; 
+	margin-left: 3rem;
+}
+
+.compValueHelpDialog .compVHBackgroundTransparent .sapMPanelContent {
+	margin-left: 3rem;
+}
+
+.sapUiSizeCompact.compValueHelpDialog .compVHBackgroundTransparent .sapMPanelBG {
+	margin-left: 2rem;
+}
+
+.compValueHelpDialog .sapMPanelContent:not(.sapMPanelBGTransparent) {
+    border-bottom-width: 0px;
+}
+
+.compValueHelpDialog .compVHDarkBackground {
+	border-color: @sapUiListTableGroupHeaderBorderColor;
+	border-style: solid;
+	border-top-width: 0.0625rem;
+	border-left-width: 0px;
+	border-right-width: 0px;
+	border-bottom-width: 0px;
+ 	background-color: fade(@sapUiListTableGroupHeaderBackground, 80%);
+	padding-left: 2rem;
+	padding-right: 2rem;
+}
+
+.sapUiSizeCompact.compValueHelpDialog .compVHDarkBackground {
+	padding-left: 1rem;
+	padding-bottom: 0.5rem;
+	padding-top: 0.5rem;
+}
+
+.compValueHelpDialog .compVHDarkBackground {
+	padding-left: 1rem; 
+}
+
+.compValueHelpDialog .compVHSelectedItemsText {
+	font-size: 16px;
+	font-weight: normal;
+	margin-top: 1rem;
+	margin-bottom: 1rem;
+}
+
+.sapUiSizeCompact.compValueHelpDialog .compVHSelectedItemsText {
+	font-size: 14px; /* @sapMFontMediumSize; */
+	font-weight: normal;
+	margin-top: 0.5rem;
+	margin-bottom: 0.5rem;
+}
+
+/* Tokens DIV */
+.compValueHelpDialog .compVHTokensDiv:focus {
+	border-radius: 5px;
+	outline: none;
+	border: 0.0625rem dotted @sapUiContentFocusColor;
+}
+
+.compValueHelpDialog .compVHTokensDiv {
+	border-width: 1px;
+	border-color: @sapUiFieldBorderColor;
+	border-style: solid;
+	border-radius: 5px;
+	padding-top: 0px;
+	padding-left: 2px;
+	padding-right: 2px;
+	margin-top: 5px;
+	margin-bottom: 5px;
+	min-height: 41px;
+	display: block;
+	box-sizing: border-box;	
+	margin-right: 42px;
+	overflow: hidden;	
+}
+
+.sapUiSizeCompact.compValueHelpDialog .compVHTokensDiv {
+	padding-top: 2px;
+	min-height: 27px;
+	margin-right: 35px;
+}
+
+/* Tokenizer Styles */
+.compValueHelpDialog .sapMTokenizerScrollContainer {
+ 	overflow: hidden;
+	height: 32px; 
+}
+ 
+.sapUiSizeCompact.compValueHelpDialog .sapMTokenizerScrollContainer {
+	height: 22px;
+}
+ 
+.compValueHelpDialog .compVHTokenizerHLayout {
+	position: relative;
+	width: 100%;
+}
+
+.compValueHelpDialog .compVHTokenizerHLayout .sapUiHLayoutChildWrapper {
+	width: 100%;
+}
+
+.compValueHelpDialog .compVHRemoveAllBtn {
+	position: absolute;
+	right: 0px;
+  	top: 50%;
+  	transform: translateY(-50%);
+  	-webkit-transform: translateY(-50%);
+}
+
+.compValueHelpDialog .compVHRemoveAllBtn .sapMBtnIcon {
+}
+
+.compValueHelpDialog .sapUiTable {
+	margin-left: 2rem;
+	margin-right: 2rem;
+	margin-bottom: 1rem;
+}
+
+/* Filterbar */
+.compValueHelpDialog .sapUiCompFilterBar .sapMPanel {
+  	margin-top: 0.5rem;
+}
+
+.compValueHelpDialog .sapUiCompFilterBar {
+	background: @sapUiListTableGroupHeaderBackground;
+	border-color: @sapUiListTableGroupHeaderBorderColor;
+	border-style: solid;
+ 	background-color: fade(@sapUiListTableGroupHeaderBackground, 0%);
+	margin-bottom: 1rem;
+}
+
+/* Filterbar and Collective Search */
+.compValueHelpDialog .compVHSearch {
+	border-color: @sapUiListTableGroupHeaderBorderColor;
+	border-style: solid;
+	border-left-width: 0rem;
+	border-right-width: 0rem;
+	border-top-width: 0rem;
+	border-bottom-width: 0rem;
+	margin-bottom: 1rem;
+	margin-left: 0rem;
+	padding-left: 2rem;
+ 	background-color: fade(@sapUiListTableGroupHeaderBackground, 80%);
+}
+
+.compValueHelpDialog .compVHFilterBarPadding.sapUiCompFilterBarNonPhone.sapUiRespGrid.sapUiRespGridHSpace1 {
+	padding-bottom: 1rem;
+}
+
+
+/* Collective Search Elements */
+.compValueHelpDialog .compVHColSearch {
+	padding-top: 1rem;
+	padding-right: 1rem;
+}
+
+.sapUiSizeCompact.compValueHelpDialog .compVHColSearchText {
+	font-size: 18px; /* @sapMFontHeader4Size; */
+	font-weight: normal; /* @sapUiFontHeaderWeight; */
+	padding-top: 0.4rem;
+	max-width: 20rem;
+}
+
+.compValueHelpDialog .compVHColSearchText {
+	font-size: 18px; /* @sapMFontHeader4Size; */ 
+	font-weight: normal; /* @sapUiFontHeaderWeight; */
+	padding-top: 1rem;
+	max-width: 20rem;
+}
+
+.compValueHelpDialog .compVHColSearchBtn {
+	line-height: 1.5rem;
+	margin-right: 1rem;
+}
+
+.sapUiSizeCompact.compValueHelpDialog .compVHColSearchBtn {
+	line-height: 1.5rem;
+	margin-right: 1rem;
+}
+
+.sapUiSizeCompact.compValueHelpDialog .compVHColSearchBtn .sapMBtnInner {
+	border-width: 0px; 	
+}
+
+.compValueHelpDialog .compVHColSearchBtn .sapMBtnInner {
+	border-width: 0px; 	
+}
+/* -------------------------------------------- */ 
+ 
+
+.compValueHelpDialog .sapMPanelContent {
+	padding: 0; 
+	border-bottom: 0px;
+	background-color: Transparent;
+}
+
+.sapUiSizeCompact.compValueHelpDialog .sapMPanelHdr {
+  	font-size: 14px; /* @sapMFontMediumSize; */
+	font-weight: normal;
+}
+
+.compValueHelpDialog .sapUiCompFilterBar .sapMPanelHdr {
+  	height: 0.5rem;
+  	border-bottom: 0px;	
+}
+
+
+/* set the content Scrollbar vertical "auto scroll" */
+.compValueHelpDialog .sapMDialogScrollCont {
+	padding-top: 0px;
+ 	height: 100%;
+	overflow-y: auto;
+}
+
+.compValueHelpDialog .displayNone {
+	display: none;
+}
+
+
+.compValueHelpDialog .sapMPanelWrappingDiv {
+ 	border-bottom: 0px;
+}
+
+/* Workaround to make the Filter/Conditions Panels background transparent */
+.sapMFilterPanel .sapMPanelBG {
+  background-color: Transparent;
+}
+
+
+/* FilterBar adjustment */
+.compValueHelpDialog .sapUiCompFilterBar {
+	border-color: @sapUiListTableGroupHeaderBorderColor;
+	border-style: solid;
+	border-top-width: 0px;
+	border-left-width: 0px;
+	border-right-width: 0px;
+}
+
+.compValueHelpDialog .sapMFilterPanel {
+	padding-left: 1rem;
+	padding-bottom: 1rem;
+}
+
+
+.compValueHelpDialog .compVHAdvancedSearchLink {
+    margin-left: 1rem;
+    margin-right: 1rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+
+html.sap-phone .compValueHelpDialog .compVHDarkBackground {
+ 	padding-left: 0rem;
+ 	padding-right: 0.5rem;
+}
+
+html.sap-phone .compValueHelpDialog .compVHDarkBackground .sapMPanelHdr {
+ 	font-size: 0.875rem;
+}
+
+html.sap-phone .compValueHelpDialog .compVHSelectedItemsText {
+    font-size: 0.875rem;
+}
+
+html.sap-phone .compValueHelpDialog .compVHSearch {
+ 	background-color: transparent;	
+ 	margin-bottom: 0rem;
+ 	margin-top: 0.5rem;
+ 	padding-right: 0rem;
+}
+
+html.sap-phone .compValueHelpDialog .compVHColSearchText {
+	margin-left: 1rem;
+}
+
+html.sap-phone .compValueHelpDialog .sapMFilterPanel {
+    padding-left: 0rem; 	
+}
+
+html.sap-phone .compValueHelpDialog .sapMTokenizerScrollContainer {
+	height: auto; 
+}
+ 
+html.sap-phone .compValueHelpDialog .compVHRemoveAllBtn {
+  	top: 1.5rem;
+}
+
+html.sap-phone .compValueHelpDialog .sapUiCompFilterBarToolbar .sapMBarChild.sapMSF {
+    max-width: initial;
+}
+
+
+html.sap-phone .compValueHelpDialog .sapUiCompFilterBar .sapUiFormResGridCont > div {
+    padding-left: 0rem;
+}
+
+.compValueHelpDialog .sapMFlexBox {
+	overflow-y: auto;
+}
+
+
+/* END "ValueHelpDialog.css" */
+
+/* START "VariantItem.css" */
+
+/* ============================================= */
+/* CSS for control sap.ui.comp/VariantItem.control */
+/* ============================================= */
+
+/* END "VariantItem.css" */
+
+/* START "VariantManagement.css" */
+
+/* ============================================= */
+/* CSS for control sap.ui.comp/VariantManagement.control */
+/* ============================================= */
+.sapUiCompVarMngmt {
+	display: inline
+}
+.sapUiCompVarMngmt .sapMLabelMaxWidth {
+	max-width:25rem;
+}
+.sapUiCompVarMngmt .sapUICompVarMngmtTextMaxWidth.sapMLabelMaxWidth {
+	max-width: 5em;
+}
+
+.sapUiCompVarMngmt .sapUICompVarMngmtText {
+	padding-top: 0.9rem;
+	margin-right: 0.125rem;
+}
+.sapUiSizeCompact .sapUiCompVarMngmt .sapUICompVarMngmtText {
+	padding-top: 0.4rem;
+}
+.sapUiCompVarMngmt .sapUICompVarMngmtModified {
+	margin-left: 0.2rem;
+}
+.sapUiCompVarMngmt .sapUICompVarMngmtDisabled {
+	opacity: 0.5;
+}
+.sapUICompVarMngmtLbl {
+	padding-left: 0.5rem;
+}
+html.sapUiMedia-Std-Phone .sapUICompVarMngmtLbl {
+	padding-left: 0rem;
+}
+html.sapUiMedia-Std-Phone .sapUiSizeCompact .sapUICompVarMngmtLbl {
+	padding-left: 0rem;
+}
+.sapUICompVarMngmtPopover .sapMSelectList {
+	border: 0rem solid;
+}
+
+.sapUiCompFilterBar .sapUiSizeCondensed .sapUICompVarMngmtTriggerBtn.sapMBtn {
+	height: 3rem;
+}
+
+.sapUiSizeCondensed .sapUICompVarMngmtTriggerBtn.sapMBtn {
+	height: 2rem;
+}
+
+.sapUiCompVarMngmtSharedVariant {
+}
+
+.sapUiCompVarMngmtImageExpand {
+    -ms-transform: rotate(180deg); /* IE 9 */
+    -webkit-transform: rotate(180deg); /* Chrome, Safari, Opera */
+    transform: rotate(180deg);
+	
+}
+
+/* END "VariantManagement.css" */
+
