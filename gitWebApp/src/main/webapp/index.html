@@ -1,0 +1,56 @@
+<html>
+<head>
+<title>Git Web Application</title>
+<style>
+.centeralign {
+	left:45%;
+	top:20%;
+}
+</style>
+
+
+<script src="sapui5/sap-ui-core.js" type="text/javascript"
+	id="sap-ui-bootstrap" data-sap-ui-theme="sap_bluecrystal"
+	data-sap-ui-libs="sap.m, sap.ui.commons, sap.ui.layout,sap.ui.table">
+	
+</script>
+<script type="text/javascript">
+	sap.ui.getCore().attachInit(function() {
+		// create a mobile app and display page1 initially
+		var app = new sap.m.App("myApp", {
+			initialPage : "page1"
+		});
+		var app = new sap.m.App("myapp");
+		var page1 = sap.ui.view({
+			id : "page1",
+			viewName : "web.login",
+			type : sap.ui.core.mvc.ViewType.JS
+		});
+		var page2 = sap.ui.view({
+			id : "page2",
+			viewName : "web.home",
+			type : sap.ui.core.mvc.ViewType.JS
+		});
+		
+		var page3 = sap.ui.view({
+			id : "page3",
+			viewName : "web.history",
+			type : sap.ui.core.mvc.ViewType.JS
+		});
+
+		var page4 = sap.ui.view({
+			id : "page4",
+			viewName : "web.historydetails",
+			type : sap.ui.core.mvc.ViewType.JS
+		});
+		
+		// add both pages to the app
+		app.addPage(page1).addPage(page2).addPage(page3).addPage(page4);
+		// place the app into the HTML document
+		app.placeAt("content");
+
+	});
+</script>
+</head>
+<body class="sapUiBody" id="content">
+</html>
